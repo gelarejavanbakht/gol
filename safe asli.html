@@ -1,0 +1,2215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <link rel="stylesheet" href="./public/css/main.css">
+    <style>
+       input:checked ~ .dot {
+       transform: translateX(100%);
+       /* background-color: #132b50; */
+       }
+   </style>
+   <script>
+   tailwind.config = {
+   darkMode: 'class',
+   }
+</script>
+</head>
+<body class="dark:bg-[#1c1c1c]">
+
+  <!--start menue-->
+
+ <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<div class="w-full mobile:bg-[#1c1c1c] mobile:text-right mobile:text-[#AFB2B4] tablet:hidden ipad:hidden desktop:hidden fixed">
+  <div x-data="{ open: false }" class="flex flex-col ">
+    <div class="flex flex-row items-center p-3">
+      <img class=" mobile:mt-[9px] mobile:ml-auto mobile:mr-auto" src="./imag/golestan.png" alt="">
+      <button class=" mobile:mt-auto" @click="open = !open">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none">
+       <g clip-path="url(#clip0_429_11066)">
+       <path d="M3 6.00092H21M3 12.0009H21M3 18.0009H21" stroke="#AFB2B4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round "></path>
+       </g>
+       <defs>
+       <clipPath id="clip0_429_11066">
+       <rect width="24" height="24" fill="white" transform="translate(0 0.000915527)"></rect>
+       </clipPath>
+       </defs>
+       </svg>
+      </button>
+    </div>
+    <nav :class="{'flex': open, 'hidden': !open}" class="flex-col hidden ">
+    <a class="px-4 py-2 mt-2 text-sm hover:text-white " href="./safe asli.html">صفحه اصلی</a>
+     
+   
+   <div @click.away="open = false"  x-data="{ open: false }">
+  <button @click="open = !open" class="px-4 flex-row text-right py-2 mt-2 text-sm  mobile:bg-[#1c1c1c] hover:text-white ">
+    <a class="py-2 text-right " href="#">شرکت گلستان</a>
+  </button>
+  <div x-show="open" class=" w-full mt-2 mobile:bg-[#1c1c1c]">
+    <div class=" mobile:bg-[#1c1c1c] w-full ">
+      <a class="block px-9 py-2 mt-2 text-sm  mobile:bg-[#1c1c1c]  hover:text-white" href="#">معرفی شرکت</a>
+      <a class="block px-9 py-2 mt-2 text-sm  mobile:bg-[#1c1c1c]  hover:text-white" href="#">تاریخچه گلستان</a>
+      <a class="block px-9 py-2 mt-2 text-sm  mobile:bg-[#1c1c1c]  hover:text-white" href="#">اخبار و اطلاعیه ها</a>
+      <a class="block px-9 py-2 mt-2 text-sm  mobile:bg-[#1c1c1c]  hover:text-white" href="#">مسئولیت های اجتماعی</a>
+      <a class="block px-9 py-2 mt-2 text-sm  mobile:bg-[#1c1c1c]  hover:text-white" href="#">سازمان فروش</a>
+      <a class="block px-9 py-2 mt-2 text-sm  mobile:bg-[#1c1c1c]  hover:text-white" href="#">سازمتن توزیع</a>
+      <a class="block px-9 py-2 mt-2 text-sm  mobile:bg-[#1c1c1c]  hover:text-white" href="#">برندها</a>
+    </div>
+  </div>
+</div>    
+
+
+
+
+
+
+
+
+
+<div @click.away="open = false"  x-data="{ open: false }">
+  <button @click="open = !open" class="px-4 flex-row text-right py-2 mt-2 text-sm  mobile:bg-[#1c1c1c] hover:text-white ">
+    <a class="py-2 text-right " href="#">محصولات</a>
+  </button>
+  <div x-show="open" class=" w-full mt-2 mobile:bg-[#1c1c1c]">
+    <div class=" mobile:bg-[#1c1c1c] w-full ">
+      <a class="block px-9 py-2 mt-2 text-sm  mobile:bg-[#1c1c1c]  hover:text-white" href="./chai.html">چای</a>
+      <a class="block px-9 py-2 mt-2 text-sm  mobile:bg-[#1c1c1c]  hover:text-white" href="#">ناتس</a>
+      <a class="block px-9 py-2 mt-2 text-sm  mobile:bg-[#1c1c1c]  hover:text-white" href="#">ادویه و چاشنی</a>
+      <a class="block px-9 py-2 mt-2 text-sm  mobile:bg-[#1c1c1c]  hover:text-white" href="#">برنج</a>
+      <a class="block px-9 py-2 mt-2 text-sm  mobile:bg-[#1c1c1c]  hover:text-white" href="#">زعفران و زرشک</a>
+      <a class="block px-9 py-2 mt-2 text-sm  mobile:bg-[#1c1c1c]  hover:text-white" href="#">دمنوش</a>
+      <a class="block px-9 py-2 mt-2 text-sm  mobile:bg-[#1c1c1c]  hover:text-white" href="#">حبوبات وغلات</a>
+      <a class="block px-9 py-2 mt-2 text-sm  mobile:bg-[#1c1c1c]  hover:text-white" href="#">عصاره های گیاهی</a>
+      <a class="block px-9 py-2 mt-2 text-sm  mobile:bg-[#1c1c1c]  hover:text-white" href="#">قند و شکر</a>
+      <a class="block px-9 py-2 mt-2 text-sm  mobile:bg-[#1c1c1c]  hover:text-white" href="#">هاتی نودل</a>
+      
+    </div>
+  </div>
+</div>    
+
+
+<div @click.away="open = false"  x-data="{ open: false }">
+  <button @click="open = !open" class="px-4 flex-row text-right py-2 mt-2 text-sm  mobile:bg-[#1c1c1c] hover:text-white ">
+    <a class="py-2 text-right " href="#">وبلاگ</a>
+  </button>
+  <div x-show="open" class=" w-full mt-2 mobile:bg-[#1c1c1c]">
+    <div class=" mobile:bg-[#1c1c1c] w-full ">
+      <a class="block px-9 py-2 mt-2 text-sm  mobile:bg-[#1c1c1c]  hover:text-white" href="./veblog.html">مجله گلستان</a>
+      
+    </div>
+  </div>
+</div>    
+
+
+
+      <a class="px-4 py-2 mt-2 text-sm hover:text-white" href="#">قرعه کشی</a>
+
+     <a class="px-4 py-2 mt-2 text-sm hover:text-white " href="#">استخدام</a>
+
+
+     
+
+<div @click.away="open = false"  x-data="{ open: false }">
+  <button @click="open = !open" class="px-4 flex-row text-right py-2 mt-2 text-sm  mobile:bg-[#1c1c1c] hover:text-white ">
+    <a class="py-2 text-right " href="#">تماس با ما</a>
+  </button>
+  <div x-show="open" class=" w-full mt-2 mobile:bg-[#1c1c1c]">
+    <div class=" mobile:bg-[#1c1c1c] w-full ">
+      <a class="block px-9 py-2 mt-2 text-sm  mobile:bg-[#1c1c1c]  hover:text-white" href="#">دفتر مرکزی</a>
+      <a class="block px-9 py-2 mt-2 text-sm  mobile:bg-[#1c1c1c]  hover:text-white" href="#">صدای مصرف کنندگان</a>
+      <a class="block px-9 py-2 mt-2 text-sm  mobile:bg-[#1c1c1c]  hover:text-white" href="#">ارتباط با مشترکین</a>
+    </div>
+  </div>
+</div>    
+
+    <a class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg hover:text-white" href="#">  EN</a>
+    
+    </nav>
+  </div>
+</div>
+
+
+
+
+  
+  
+  <div class="
+               tablet:w-[100%] tablet:h-[175px] tablet:bg-[#1c1c1c] tablet:flex tablet:fixed
+               ipad:w-[100%]  ipad:h-[170px]  ipad:bg-[#1c1c1c]  ipad:fixed  ipad:flex
+                translition-all duration-300 ease-linear mobile:hidden desktop:hidden">
+                <div class="
+                tablet:w-[650px] tablet:h-[130px] tablet:mr-auto tablet:ml-auto tablet:flex
+                ipad:w-[900px] ipad:h-[130px] ipad:mr-auto ipad:ml-auto ipad:flex">
+                 <div class="
+                 
+                 tablet:w-[180px] tablet:h-[100px] tablet:mt-[9px] tablet:ml-auto tablet:mr-auto
+                ipad:w-[180px] ipad:h-[100px] ipad:mt-[9px] ipad:ml-auto ipad:mr-auto"><img src="./imag/golestan.png" alt=""></div>
+   <div class="tablet:w-[650px] tablet:h-[30px] tablet:flex  tablet:mt-[143px] tablet:fixed  tablet:justify-center
+               ipad:w-[900px] ipad:h-[30px] ipad:flex ipad:justify-center ipad:mt-[140px] 
+               fixedtranslition-all duration-300 ease-linear">
+   <a href="#" class="tablet: tablet:h-[100%] tablet:text-[#AFB2B4] tablet:text-[15px]
+                       tablet:px-[6px] 
+                       ipad:w-fit ipad:h-[100%] ipad:text-[#AFB2B4] ipad:text-[18px]
+                       ipad:px-[20px] 
+                      hover:text-white translition-all duration-300 ease-linear ">EN</a>
+                       <div class=" group">
+   <a href="#" class="tablet:w-[80px] tablet:h-[100%] tablet:text-[#AFB2B4] tablet:text-[14px]
+                       tablet:px-[9px] tablet:block
+                       ipad:w-fit ipad:h-[100%]  ipad:text-[#AFB2B4] ipad:text-[16px]
+                       ipad:px-[20px] ipad:block
+                       hover:text-white translition-all duration-300 ease-linear">تماس با ما</a>
+                       <div class="
+                       tablet:w-[173px] tablet:h-[130px] tablet:bg-[#292929] tablet:absolute
+                       tablet:group-hover:block tablet:hidden
+                       ipad:w-[173px] ipad:h-[130px] ipad:bg-[#292929] ipad:absolute 
+                       ipad:group-hover:block ipad:hidden ">
+                      <div class="duration-300 ease-linear tablet:flex tablet:flex-row tablet:flex-wrap tablet:gap-4 ipad:flex ipad:flex-row ipad:flex-wrap ipad:gap-4 translition-all">
+                       <a href="" class="
+                       tablet:text-[#AFB2B4]  tablet:text-[16px] tablet:ml-[50%] tablet:mt-2
+                       ipad:text-[#AFB2B4] ipad:text-[16px] ipad:ml-[50%] ipad:mt-2
+                      hover:text-white translition-all duration-300 ease-linear">
+                        دفتر مرکزی</a>
+                       <a href="" class="
+                       tablet:text-[#AFB2B4] tablet:text-[15px] tablet:ml-[14%]
+                       ipad:text-[#AFB2B4] ipad:text-[15px] ipad:ml-[14%]
+                       hover:text-white translition-all duration-300 ease-linear">
+                        صدای مصرف کنندگان
+                       </a>
+                       <a href="" class="
+                       tablet:text-[#AFB2B4] tablet:text-[15px] tablet:ml-[30%]
+                       ipad:text-[#AFB2B4] ipad:text-[15px] ipad:ml-[30%]
+                       hover:text-white   translition-all duration-300 ease-linear">
+                        ارتباط با مشترکین
+                       </a>
+                       </div>
+                       </div>
+                       </div>
+                        
+    <a href="#" class="tablet:w-fit tablet:h-[100%] tablet:text-[#AFB2B4] tablet:text-[14px] tablet:px-[12px]
+                       ipad:w-fit ipad:h-[100%] ipad:text-[#AFB2B4] ipad:text-[16px] ipad:px-[20px]
+                       desktop:w-fit desktop:h-[100%] desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white
+                       translition-all duration-300 ease-linear">استخدام</a>
+    <a href="#" class="tablet:w-fit tablet:h-[100%] tablet:text-[#AFB2B4] tablet:text-[14px] tablet:px-[12px]
+                       ipad:w-fit ipad:h-[100%] ipad:text-[#AFB2B4] ipad:text-[16px] ipad:px-[20px]
+                       hover:text-white translition-all duration-300 ease-linear">قرعه کشی</a>
+                       <div class="group ">
+    <a href="./veblog.html" class="tablet:w-fit tablet:h-[100%] tablet:text-[#AFB2B4] tablet:text-[14px] tablet:px-[12px] tablet:block
+                       ipad:w-fit ipad:h-[100%] ipad:text-[#AFB2B4] ipad:text-[16px] ipad:px-[20px] ipad:block
+                       hover:text-white translition-all duration-300 ease-linear">وبلاگ</a>
+                       <div class=" 
+                       tablet:w-[180px] tablet:h-[50px] tablet:bg-[#292929] tablet:absolute 
+                       tablet:group-hover:block tablet:hidden 
+                       ipad:w-[180px] ipad:h-[50px] ipad:bg-[#292929] ipad:absolute 
+                       ipad:group-hover:block ipad:hidden ">
+                       <div class="
+                        tablet:flex tablet:flex-row tablet:flex-wrap
+                        tablet:text-[#AFB2B4] tablet:text-[14px] tablet:mt-[3%] tablet:ml-[45%]
+                       ipad:flex ipad:flex-row ipad:flex-wrap
+                       ipad:text-[#AFB2B4] ipad:text-[16px] ipad:mt-[3%] ipad:ml-[45%]">
+                       <a href="#" class="duration-300 ease-linear hover:text-white translition-all">مجله گلستان</a>
+                       </div>
+                       </div>
+                       </div>
+                       <div class="group">
+    <a href="./chai.html" class=" tablet:w-fit tablet:h-[100%]  tablet:text-[#AFB2B4] tablet:text-[14px] 
+                        tablet:px-[12px] tablet:block
+                       ipad:w-fit ipad:h-[100%]   ipad:text-[#AFB2B4] ipad:text-[16px] 
+                       ipad:px-[20px] ipad:block
+                       hover:text-white translition-all duration-300 ease-linear">محصولات</a>
+                       <div class="
+                         tablet:w-[184px] tablet:h-[552px] tablet:bg-[#292929] tablet:absolute
+                         tablet:group-hover:block tablet:hidden 
+                       ipad:w-[184px] ipad:h-[552px] ipad:bg-[#292929] ipad:absolute
+                       ipad:group-hover:block ipad:hidden ">
+                        
+                       
+                        <div class="
+                        tablet:w-[100%] tablet:h-[50px] tablet:py-[12px]
+                        ipad:w-[100%] ipad:h-[50px] ipad:py-[12px]">
+                        <a href="./chai.html" class=" 
+                        tablet:text-[#AFB2B4] tablet:text-[16px] tablet:ml-[75%]
+                        ipad:text-[#AFB2B4] ipad:text-[16px] ipad:ml-[75%]
+                        hover:text-white translition-all duration-300 ease-linear">چای</a>
+                        </div>
+                        <div class="
+                        tablet:w-[100%] tablet:h-[45px]
+                        ipad:w-[100%] ipad:h-[45px]">
+                        <a href="#" class="
+                        tablet:text-[#AFB2B4] tablet:text-[16px] tablet:ml-[72%]
+                        ipad:text-[#AFB2B4] ipad:text-[16px] ipad:ml-[72%]
+                       hover:text-white translition-all duration-300 ease-linear">ناتس</a>
+                        </div>
+                        <div class="
+                        tablet:w-[100%] tablet:h-[45px]
+                        ipad:w-[100%] ipad:h-[45px]">
+                        <a href="#" class="
+                        tablet:text-[#AFB2B4] tablet:text-[16px] tablet:ml-[40%]
+                        ipad:text-[#AFB2B4] ipad:text-[16px]  ipad:ml-[40%]
+                       hover:text-white translition-all duration-300 ease-linear">ادویه وچاشنی</a>
+                        </div>
+                        <div class="
+                        tablet:w-[100%] tablet:h-[45px]
+                        ipad:w-[100%] ipad:h-[45px]">
+                        <a href="#" class="
+                        tablet:text-[#AFB2B4] tablet:text-[16px] tablet:ml-[76%]
+                        ipad:text-[#AFB2B4] ipad:text-[16px]  ipad:ml-[76%]
+                        hover:text-white translition-all duration-300 ease-linear">برنج</a>
+                        </div>
+                        <div class="
+                        tablet:w-[100%] tablet:h-[45px]
+                        ipad:w-[100%] ipad:h-[45px]">
+                        <a href="#" class="
+                        tablet:text-[#AFB2B4] tablet:text-[16px] tablet:ml-[39%]
+                        ipad:text-[#AFB2B4] ipad:text-[16px] ipad:ml-[39%]
+                         hover:text-white translition-all duration-300 ease-linear">زعفران وزرشک</a>
+                        </div>
+                        <div class="
+                        tablet:w-[100%] tablet:h-[45px]
+                        ipad:w-[100%] ipad:h-[45px]">
+                        <a href="#" class="
+                        tablet:text-[#AFB2B4] tablet:text-[16px] tablet:ml-[63%]
+                        ipad:text-[#AFB2B4] ipad:text-[16px] ipad:ml-[63%]
+                        hover:text-white translition-all duration-300 ease-linear">دمنوش</a>
+                        </div>
+                        <div class="
+                        tablet:w-[100%] tablet:h-[45px]
+                        ipad:w-[100%] ipad:h-[45px]">
+                        <a href="#" class="
+                        tablet:text-[#AFB2B4] tablet:text-[16px] tablet:ml-[37%]
+                        ipad:text-[#AFB2B4] ipad:text-[16px] ipad:ml-[37%]
+                        hover:text-white translition-all duration-300 ease-linear">حبوبات و غلات</a>
+                        </div>
+                        <div class="
+                        tablet:w-[100%] tablet:h-[45px]
+                        ipad:w-[100%] ipad:h-[45px]
+                        desktop:w-[100%] desktop:h-[45px]">
+                        <a href="#" class="
+                        tablet:text-[#AFB2B4] tablet:text-[16px] tablet:ml-[25%]
+                        ipad:text-[#AFB2B4] ipad:text-[16px] ipad:ml-[25%]
+                        desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white desktop:ml-[25%]
+                         translition-all duration-300 ease-linear">عصاره های گیاهی</a>
+                        </div>
+                        <div class="
+                        tablet:w-[100%] tablet:h-[45px]
+                        ipad:w-[100%] ipad:h-[45px]">
+                        <a href="#" class="
+                        tablet:text-[#AFB2B4] tablet:text-[16px] tablet:ml-[55%]
+                        ipad:text-[#AFB2B4] ipad:text-[16px] ipad:ml-[55%]
+                        hover:text-white translition-all duration-300 ease-linear">قند و شکر</a>
+                        </div>
+                        <div class="
+                        tablet:w-[100%] tablet:h-[45px]
+                        ipad:w-[100%] ipad:h-[45px]">
+                        <a href="#" class="
+                        tablet:text-[#AFB2B4] tablet:text-[16px] tablet:ml-[52%]
+                        ipad:text-[#AFB2B4] ipad:text-[16px] ipad:ml-[52%]
+                        hover:text-white translition-all duration-300 ease-linear">هانی نودل</a>
+                        </div>
+                        <div class="
+                        tablet:w-[100%] tablet:h-[45px]
+                        ipad:w-[100%] ipad:h-[45px]">
+                        <a href="#" class="
+                        tablet:text-[#AFB2B4] tablet:text-[14px] tablet:ml-[35%]
+                        ipad:text-[#AFB2B4] ipad:text-[16px] ipad:ml-[35%]
+                        hover:text-white translition-all duration-300 ease-linear">سایر محصولات</a>
+                        </div>
+                        <div class="
+                        tablet:w-[100%] tablet:h-[45px]
+                        ipad:w-[100%] ipad:h-[45px] ">
+                        <a href="#" class="
+                        tablet:text-[#AFB2B4] tablet:text-[16px] tablet:ml-[60%]
+                        ipad:text-[#AFB2B4] ipad:text-[16px] ipad:ml-[60%]
+                        hover:text-white translition-all duration-300 ease-linear">گل کیس</a>
+                        </div>
+                       </div>
+                       </div>
+                       <div class="group">
+    <a href="#" class="tablet:w-fit tablet:h-[100%] tablet:text-[#AFB2B4] tablet:text-[14px]
+                       tablet:px-[12px] tablet:block
+                       ipad:w-fit ipad:h-[100%] ipad:text-[#AFB2B4] ipad:text-[16px]
+                       ipad:px-[20px] ipad:block
+                       hover:text-white translition-all duration-300 ease-linear">شرکت گلستان
+                       </a>
+                       <div class="
+                       tablet:w-[197px] tablet:h-[329px] tablet:bg-[#292929] tablet:absolute
+                       tablet:group-hover:block tablet:hidden  tablet:top-[30px]                 
+                       ipad:w-[197px] ipad:h-[329px] ipad:bg-[#292929] ipad:absolute
+                       ipad:group-hover:block ipad:hidden  ipad:top-[30px]">
+                       <div class="
+                       tablet:w-[100%] tablet:h-[50px] tablet:py-[12px]
+                       tablet:flex tablet:flex-row-reverse tablet:mr-[10px] 
+                       ipad:w-[100%] ipad:h-[50px] ipad:py-[12px]
+                       ipad:flex ipad:flex-row-reverse ipad:mr-[10px] "> 
+                       <a href="#"class="
+                        tablet:flex tablet:flex-row-reverse tablet:mr-[15px] tablet:text-[#AFB2B4]
+                        ipad:flex ipad:flex-row-reverse ipad:mr-[15px] ipad:text-[#AFB2B4]
+                        translition-all duration-300 ease-linear">معرفی شرکت
+                       </a>
+                       </div>
+                       <div class="
+                       tablet:w-[100%] tablet:h-[45px]
+                       ipad:w-[100%] ipad:h-[45px]">
+                       <a href="#" class="
+                       tablet:flex tablet:flex-row-reverse tablet:mr-[15px] tablet:text-[#AFB2B4]
+                       ipad:flex ipad:flex-row-reverse ipad:mr-[15px] ipad:text-[#AFB2B4]
+                       hover:text-white translition-all duration-300 ease-linear">تاریخچه گلستان</a>
+                       </div>
+                       <div class="
+                       tablet:w-[100%] tablet:h-[45px]
+                       ipad:w-[100%] ipad:h-[45px]">
+                       <a href="#" class="
+                       tablet:flex tablet:flex-row-reverse tablet:mr-[15px] tablet:text-[#AFB2B4]
+                       ipad:flex ipad:flex-row-reverse ipad:mr-[15px] ipad:text-[#AFB2B4]
+                       hover:text-white translition-all duration-300 ease-linear">اخبار و اطلاعیه ها</a>
+                       </div>
+                       <div class="
+                       tablet:w-[100%] tablet:h-[45px]
+                       ipad:w-[100%] ipad:h-[45px]">
+                       <a href="#" class="
+                       tablet:flex tablet:flex-row-reverse tablet:mr-[15px] tablet:text-[#AFB2B4]
+                       ipad:flex ipad:flex-row-reverse ipad:mr-[15px] ipad:text-[#AFB2B4]
+                       hover:text-white translition-all duration-300 ease-linear">مسئولیت های اجتماعی</a>
+                       </div>
+                       <div class="
+                       tablet:w-[100%] tablet:h-[45px]
+                       ipad:w-[100%] ipad:h-[45px]">
+                       <a href="#" class="
+                       tablet:flex tablet:flex-row-reverse tablet:mr-[15px] tablet:text-[#AFB2B4]
+                       ipad:flex ipad:flex-row-reverse ipad:mr-[15px] ipad:text-[#AFB2B4]
+                      hover:text-white translition-all duration-300 ease-linear">سازمان فروش</a>
+                       </div>
+                       <div class="
+                       tablet:w-[100%] tablet:h-[45px]
+                       ipad:w-[100%] ipad:h-[45px]">
+                       <a href="#" class="
+                       tablet:flex tablet:flex-row-reverse tablet:mr-[14px]  tablet:text-[#AFB2B4]
+                       ipad:flex ipad:flex-row-reverse ipad:mr-[15px]  ipad:text-[#AFB2B4]
+                       hover:text-white desktop:text-[#AFB2B4]
+                        translition-all duration-300 ease-linear">سازمان توزیع</a>
+                       </div>
+                       <div class="
+                       tablet:w-[100%] tablet:h-[45px]
+                       ipad:w-[100%] ipad:h-[45px]
+                       desktop:w-[100%] desktop:h-[45px]">
+                       <a href="#" class="
+                       tablet:flex tablet:flex-row-reverse tablet:mr-[14px] tablet:text-[#AFB2B4]
+                       ipad:flex ipad:flex-row-reverse ipad:mr-[15px] ipad:text-[#AFB2B4]
+                       hover:text-white translition-all duration-300 ease-linear">برندها</a>
+                       </div>
+                       </div>
+                       </div>
+    <a href="./safe asli.html" class="tablet:w-fit tablet:h-[100%] tablet:text-[#AFB2B4] tablet:text-[14px] tablet:px-[12px]
+                       ipad:w-fit ipad:h-[100%] ipad:text-[#AFB2B4] ipad:text-[16px] ipad:px-[20px]
+                       hover:text-white translition-all duration-300 ease-linear">صفحه اصلی</a>
+                        
+                  
+   </div>
+   
+   </div>
+   
+  </div>
+  
+
+
+
+
+  
+
+ <div class="
+             
+             
+              desktop:w-[100%] desktop:h-[100px] desktop:bg-[#1c1c1c] desktop:fixed desktop:flex 
+               translition-all duration-300 ease-linear mobile:hidden ipad:hidden tablet:hidden">
+               <div class="
+              
+              
+               desktop:w-[1100px] desktop:h-[100px] desktop:mr-auto desktop:ml-auto desktop:flex">
+                
+  <div class="
+              
+              
+              
+              desktop:w-[1100px] desktop:h-[33px] desktop:flex
+              desktop:justify-center desktop:mt-[40px] desktop:fixed translition-all duration-300 ease-linear ">
+  <a href="#" class="
+                     
+                     
+                     
+                      desktop:w-fit desktop:h-[100%] desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white
+                      desktop:px-[20px]  translition-all duration-300 ease-linear ">EN</a>
+                      <div class=" group">
+  <a href="#" class="
+                     
+                     
+                     
+                      desktop:w-fit desktop:h-[100%] desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white
+                      border-solid desktop:border-[#4d4d52]  desktop:border-s-[1px] desktop:px-[20px] desktop:block
+                       translition-all duration-300 ease-linear">تماس با ما</a>
+                      <div class="
+                     
+                     
+                     
+                     
+                      desktop:w-[173px] desktop:h-[130px] desktop:bg-[#292929] desktop:absolute 
+                      desktop:group-hover:block desktop:hidden ">
+                     <div class="duration-300 ease-linear tablet:flex tablet:flex-row tablet:flex-wrap tablet:gap-4 ipad:flex ipad:flex-row ipad:flex-wrap ipad:gap-4 desktop:flex desktop:flex-row desktop:flex-wrap desktop:gap-4 translition-all">
+                      <a href="" class="
+                     
+                     
+                      desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white desktop:ml-[50%] desktop:mt-2
+                       translition-all duration-300 ease-linear">
+                       دفتر مرکزی</a>
+                      <a href="" class="
+                     
+                     
+                      desktop:text-[#AFB2B4] desktop:text-[15px] hover:text-white desktop:ml-[14%]
+                       translition-all duration-300 ease-linear">
+                       صدای مصرف کنندگان
+                      </a>
+                      <a href="" class="
+                   
+                   
+                      desktop:text-[#AFB2B4] desktop:text-[15px] hover:text-white desktop:ml-[30%]
+                       translition-all duration-300 ease-linear">
+                       ارتباط با مشترکین
+                      </a>
+                      </div>
+                      </div>
+                      </div>
+                       
+   <a href="#" class="
+                      
+                      desktop:w-fit desktop:h-[100%] desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white
+                      border-solid desktop:border-[#4d4d52]  desktop:border-s-[1px] desktop:px-[20px]
+                       translition-all duration-300 ease-linear">استخدام</a>
+   <a href="#" class="
+                      
+                      desktop:w-fit desktop:h-[100%] desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white
+                      border-solid desktop:border-[#4d4d52]  desktop:border-s-[1px] desktop:px-[20px]
+                       translition-all duration-300 ease-linear">قرعه کشی</a>
+                      <div class="group ">
+   <a href="./veblog.html" class="
+                      
+                      desktop:w-fit desktop:h-[100%] desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white
+                      border-solid desktop:border-[#4d4d52]  desktop:border-s-[1px] desktop:px-[20px] desktop:block
+                       translition-all duration-300 ease-linear">وبلاگ</a>
+                      <div class=" 
+                    
+                    
+                    
+                    
+                      desktop:w-[180px] desktop:h-[50px] desktop:bg-[#292929] desktop:absolute 
+                      desktop:group-hover:block desktop:hidden desktop:">
+                      <div class=" desktop:flex desktop:flex-row desktop:flex-wrap">
+                      <a href="#" class="desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white desktop:mt-[3%] 
+                      desktop:ml-[45%]  translition-all duration-300 ease-linear">مجله گلستان</a>
+                      </div>
+                      </div>
+                      </div>
+                      <div class="group">
+   <a href="./chai.html" class="
+                      
+                      
+                      
+                      desktop:w-fit desktop:h-[100%] desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white
+                      border-solid desktop:border-[#4d4d52]  desktop:border-s-[1px] desktop:px-[20px] desktop:block
+                       translition-all duration-300 ease-linear">محصولات</a>
+                      <div class="
+                     
+                     
+                     
+                     
+                      desktop:w-[184px] desktop:h-[552px] desktop:bg-[#292929] desktop:absolute
+                      desktop:group-hover:block desktop:hidden ">
+                       
+                      
+                       <div class="
+                   
+                   
+                       desktop:w-[100%] desktop:h-[50px] desktop:py-[12px]">
+                       <a href="./chai.html" class=" 
+                    
+                    
+                       desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white desktop:ml-[75%]
+                        translition-all duration-300 ease-linear">چای</a>
+                       </div>
+                       <div class="
+                    
+                    
+                       desktop:w-[100%] desktop:h-[45px]">
+                       <a href="#" class="
+                      
+                      
+                       desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white desktop:ml-[72%]
+                        translition-all duration-300 ease-linear">ناتس</a>
+                       </div>
+                       <div class="
+                     
+                     
+                       desktop:w-[100%] desktop:h-[45px]">
+                       <a href="#" class="
+                    
+                    
+                       desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white desktop:ml-[40%]
+                        translition-all duration-300 ease-linear">ادویه وچاشنی</a>
+                       </div>
+                       <div class="
+                      
+                      
+                       desktop:w-[100%] desktop:h-[45px]">
+                       <a href="#" class="
+                     
+                     
+                       desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white desktop:ml-[76%]
+                        translition-all duration-300 ease-linear">برنج</a>
+                       </div>
+                       <div class="
+                     
+                     
+                       desktop:w-[100%] desktop:h-[45px]">
+                       <a href="#" class="
+                     
+                     
+                       desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white desktop:ml-[39%]
+                        translition-all duration-300 ease-linear">زعفران وزرشک</a>
+                       </div>
+                       <div class="
+                      
+                      
+                       desktop:w-[100%] desktop:h-[45px]">
+                       <a href="#" class="
+                     
+                     
+                       desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white desktop:ml-[63%]
+                        translition-all duration-300 ease-linear">دمنوش</a>
+                       </div>
+                       <div class="
+                    
+                    
+                       desktop:w-[100%] desktop:h-[45px]">
+                       <a href="#" class="
+                      
+                      
+                       desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white desktop:ml-[37%]
+                        translition-all duration-300 ease-linear">حبوبات و غلات</a>
+                       </div>
+                       <div class="
+                    
+                    
+                       desktop:w-[100%] desktop:h-[45px]">
+                       <a href="#" class="
+                      
+                      
+                       desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white desktop:ml-[25%]
+                        translition-all duration-300 ease-linear">عصاره های گیاهی</a>
+                       </div>
+                       <div class="
+                    
+                    
+                       desktop:w-[100%] desktop:h-[45px]">
+                       <a href="#" class="
+                      
+                      
+                       desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white desktop:ml-[55%]
+                        translition-all duration-300 ease-linear">قند و شکر</a>
+                       </div>
+                       <div class="
+                     
+                     
+                       desktop:w-[100%] desktop:h-[45px]">
+                       <a href="#" class="
+                    
+                    
+                       desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white desktop:ml-[52%]
+                        translition-all duration-300 ease-linear">هانی نودل</a>
+                       </div>
+                       <div class="
+                      
+                      
+                       desktop:w-[100%] desktop:h-[45px]">
+                       <a href="#" class="
+                    
+                    
+                       desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white desktop:ml-[35%]
+                        translition-all duration-300 ease-linear">سایر محصولات</a>
+                       </div>
+                       <div class="
+                     
+                     
+                       desktop:w-[100%] desktop:h-[45px]">
+                       <a href="#" class="
+                    
+                    
+                       desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white desktop:ml-[60%]
+                        translition-all duration-300 ease-linear">گل کیس</a>
+                       </div>
+                      </div>
+                      </div>
+                      <div class="group">
+   <a href="#" class="
+                      
+                      
+                      
+                      desktop:w-fit desktop:h-[100%] desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white
+                      border-solid desktop:border-[#4d4d52]  desktop:border-s-[1px] desktop:px-[20px] desktop:block
+                       translition-all duration-300 ease-linear">شرکت گلستان
+                      </a>
+                      <div class="
+                     
+                     
+                     
+                     
+                      desktop:w-[197px] desktop:h-[329px] desktop:bg-[#292929] desktop:absolute
+                      desktop:group-hover:block desktop:hidden  desktop:top-[33px]">
+                      <div class="
+                     
+                     
+                     
+                     
+                      desktop:w-[100%] desktop:h-[50px] desktop:py-[12px]"> 
+                      <a href="#"class="
+                      
+                      
+                       desktop:flex desktop:flex-row-reverse desktop:mr-[15px] hover:text-white desktop:text-[#AFB2B4]
+                        translition-all duration-300 ease-linear">معرفی شرکت
+                      </a>
+                      </div>
+                      <div class="
+                     
+                     
+                      desktop:w-[100%] desktop:h-[45px]">
+                      <a href="#" class="
+                    
+                    
+                      desktop:flex desktop:flex-row-reverse desktop:mr-[15px]  hover:text-white desktop:text-[#AFB2B4]
+                       translition-all duration-300 ease-linear">تاریخچه گلستان</a>
+                      </div>
+                      <div class="
+                      
+                      
+                      desktop:w-[100%] desktop:h-[45px]">
+                      <a href="#" class="
+                    
+                    
+                      desktop:flex desktop:flex-row-reverse desktop:mr-[15px]  hover:text-white desktop:text-[#AFB2B4]
+                       translition-all duration-300 ease-linear">اخبار و اطلاعیه ها</a>
+                      </div>
+                      <div class="
+                      
+                      
+                      desktop:w-[100%] desktop:h-[45px]">
+                      <a href="#" class="
+                    
+                    
+                      desktop:flex desktop:flex-row-reverse desktop:mr-[15px]  hover:text-white desktop:text-[#AFB2B4]
+                       translition-all duration-300 ease-linear">مسئولیت های اجتماعی</a>
+                      </div>
+                      <div class="
+                     
+                     
+                      desktop:w-[100%] desktop:h-[45px]">
+                      <a href="#" class="
+                     
+                     
+                      desktop:flex desktop:flex-row-reverse desktop:mr-[15px] hover:text-white desktop:text-[#AFB2B4]
+                       translition-all duration-300 ease-linear">سازمان فروش</a>
+                      </div>
+                      <div class="
+                      
+                      
+                      desktop:w-[100%] desktop:h-[45px]">
+                      <a href="#" class="
+                     
+                     
+                      desktop:flex desktop:flex-row-reverse desktop:mr-[15px]  hover:text-white desktop:text-[#AFB2B4]
+                       translition-all duration-300 ease-linear">سازمان توزیع</a>
+                      </div>
+                      <div class="
+                     
+                     
+                      desktop:w-[100%] desktop:h-[45px]">
+                      <a href="#" class="
+                     
+                     
+                      desktop:flex desktop:flex-row-reverse desktop:mr-[15px]  hover:text-white desktop:text-[#AFB2B4]
+                       translition-all duration-300 ease-linear">برندها</a>
+                      </div>
+                      </div>
+                      </div>
+   <a href="./safe asli.html" class="
+                      
+                      desktop:w-fit desktop:h-[100%] desktop:text-[#AFB2B4] desktop:text-[16px] hover:text-white
+                      border-solid desktop:border-[#4d4d52]  desktop:border-s-[1px] desktop:px-[20px] 
+                       translition-all duration-300 ease-linear">صفحه اصلی</a>
+                       
+                     <div class="desktop:w-[163px] desktop:h-[99px]"><img src="./imag/golestan.png" alt=""></div>
+  </div>
+  
+  </div>
+  
+ </div>
+ 
+  
+  <!--end menue-->
+
+  
+   <!--start history-->
+   <div class="mobile:flex">
+   <div class="mobile:flex  mobile:flex-row mobile:flex-wrap mobile:w-[100%] mobile:h-[702px]  mobile: bg-transparent mobile:bg-gradient-to-t mobile:from-[#D2D2D2] mobile:to-[#FBFBFB] mobile:mt-[180px] 
+   tablet:hidden ipad:hidden desktop:hidden">
+    <div class="mobile:w-[90%] mobile:h-[309px] mobile:ml-auto mobile:mr-auto ">
+      <div class="mobile:w-[100%] mobile:h-[54px] mobile:text-3xl  mobile:text-[#ff0000] mobile:text-right ">
+        <h2>قرعه‌کشی ماهیانه گلستان</h2></div>
+      <div class="mobile:w-[100%] mobile:h-[39px]  mobile:text-xl mobile:text-right mobile:text-[#58595B]">
+        <h2>قرعه‌کشی ماهیانه مصرف‌کنندگان چای گلستان</h2></div>
+      <div class="mobile:w-[100%] mobile:h-[126px] mobile:text-right mobile:text-[#898989]  mobile:text-wrap mobile:leading-[30px] ">
+       <h2>هر یک از مصرف‌کنندگان محصولات چای گلستان می‌توانند با ارسال کد
+       قرعه کشی روی بسته به شماره 30007405 در قرعه کشی‌های ماهیانه سال
+       1403شرکت کنند. نگهداری از بسته‌بندی محصول برای اهدای جایزه الزامی است</h2></div>
+      <div class="mobile:w-[100%] mobile:h-[90px] ">
+        <div class="mobile:w-[128px] mobile:h-[41px]  mobile:border-[#b4bfc7] mobile:rounded-[9px] mobile:border-[1px] mobile:ml-auto  mobile:flex mobile:hover:bg-[#ff0000] mobile:bg-white">
+        <a href="#" class="
+       mobile:font-extralight mobile:ml-[18px] mobile:text-center mobile:text-[#7d868b] mobile:mt-[5px] mobile:hover:text-white  ">اطلاعات بیشتر</a>
+       </div>
+       </div>
+       </div>
+       <div class="mobile:w-[100%] mobile:h-[393px]">
+        <img class="mobile:ml-auto mobile:mr-[20%]" src="./imag/main.image/golestaan.png" alt="">
+       </div>
+       </div>
+       </div>
+         
+
+       
+         
+
+       
+       <div class=" tablet:flex ipad:flex desktop:flex mobile:hidden">
+     <div class="
+     tablet:w-[100%] tablet:h-[457px] tablet:bg-transparent tablet:bg-gradient-to-t tablet:from-[#D2D2D2] tablet:to-[#FBFBFB] tablet:flex tablet:flex-wrap 
+     tablet:flex-row tablet:mt-[200px]
+     ipad:w-[100%] ipad:h-[457px] ipad:bg-transparent ipad:bg-gradient-to-t ipad:from-[#D2D2D2] ipad:to-[#FBFBFB] ipad:flex ipad:flex-wrap 
+     ipad:flex-row ipad:mt-[200px]
+     desktop:w-[100%] desktop:h-[457px] desktop:bg-transparent desktop:bg-gradient-to-t desktop:from-[#D2D2D2] desktop:to-[#FBFBFB]  desktop:flex desktop:flex-wrap desktop:flex-row desktop:mt-[100px]">
+      <div class="
+      tablet:w-[690px] tablet:h-[376px]  tablet:ml-auto tablet:mr-auto tablet:mt-[36px] tablet:flex tablet:flex-wrap tablet:flex-row
+      ipad:w-[929px] ipad:h-[363px] ipad:ml-auto ipad:mr-auto ipad:mt-[36px] ipad:flex ipad:flex-wrap ipad:flex-row
+      desktop:w-[929px] desktop:h-[363px] desktop:ml-auto desktop:mr-auto desktop:mt-[36px] desktop:flex desktop:flex-wrap desktop:flex-row">
+        <div class="
+        tablet:w-[360px] tablet:h-[376px]
+        ipad:w-[369px] ipad:h-[363px] 
+        desktop:w-[369px] desktop:h-[363px] ">
+          <img class="
+          tablet:w-[360px] tablet:h-[400px]
+          ipad:w-[350px] ipad:h-[400px]
+          desktop:w-[350px] desktop:h-[400px]  " src="./imag/main.image/golestaan.png" alt="">
+        </div>
+        <div class="
+        tablet:w-[330px] tablet:h-[376px]
+        ipad:w-[560px] ipad:h-[363px]
+        desktop:w-[560px] desktop:h-[363px]">
+          <div class="
+          tablet:w-[330px] tablet:h-[53px]  tablet:text-3xl  tablet:text-[#ff0000] tablet:text-right tablet:mt-[10px]
+          ipad:w-[560px] ipad:h-[50px]  ipad:text-3xl  ipad:text-[#ff0000] ipad:text-right ipad:mt-[10px]
+          desktop:w-[560px] desktop:h-[50px]  desktop:text-3xl  desktop:text-[#ff0000] desktop:text-right desktop:mt-[10px]">
+   <h2>قرعه‌کشی ماهیانه گلستان</h2>
+   </div>
+   <div class="
+   tablet:w-[330px] tablet:h-[56px] tablet:text-xl tablet:text-right tablet:text-[#58595B] 
+   ipad:w-[560px] ipad:h-[53px] ipad:text-xl ipad:text-right ipad:text-[#58595B] 
+   desktop:w-[560px] desktop:h-[53px] desktop:text-xl desktop:text-right desktop:text-[#58595B] ">
+   <h2>قرعه‌کشی ماهیانه مصرف‌کنندگان چای گلستان</h2>
+   </div>
+   <div class="
+   tablet:w-[330px] tablet:h-[180px] tablet:text-right tablet:text-[#898989]  tablet:text-wrap tablet:leading-[30px] tablet:ml-auto tablet:mt-[20px]
+   ipad:w-[540px] ipad:h-[143px] ipad:text-right ipad:text-[#898989]  ipad:text-wrap ipad:leading-[30px] ipad:ml-[20px] ipad:mt-[20px]
+   desktop:w-[540px] desktop:h-[143px] desktop:text-right desktop:text-[#898989]  desktop:text-wrap desktop:leading-[30px] desktop:ml-[20px] desktop:mt-[20px]">
+   <h2>هر یک از مصرف‌کنندگان محصولات چای گلستان می‌توانند با ارسال کد
+        قرعه کشی روی بسته به شماره 30007405 در قرعه کشی‌های ماهیانه سال
+        1403شرکت کنند. نگهداری از بسته‌بندی محصول برای اهدای جایزه الزامی است</h2>
+   </div>
+   <div class="
+   tablet:w-[330px] tablet:h-[53px]
+   ipad:w-[560px] ipad:h-[53px]
+   desktop:w-[560px] desktop:h-[53px]">
+   <div class="
+   tablet:w-[128px] tablet:h-[41px]  tablet:border-[#b4bfc7] tablet:rounded-[9px] tablet:border-[1px] tablet:ml-auto  tablet:flex tablet:hover:bg-[#ff0000] tablet:bg-white
+   ipad:w-[128px] ipad:h-[41px]  ipad:border-[#b4bfc7] ipad:rounded-[9px] ipad:border-[1px] ipad:ml-auto ipad:flex ipad:hover:bg-[#ff0000] ipad:bg-white
+   desktop:w-[128px] desktop:h-[41px]  desktop:border-[#b4bfc7] desktop:rounded-[9px] desktop:border-[1px] desktop:ml-auto  desktop:flex 
+   desktop:hover:bg-[#ff0000] desktop:bg-white">
+   <a href="#" class="
+   tablet:font-extralight tablet:ml-[18px] tablet:text-center tablet:text-[#7d868b] tablet:mt-[5px] tablet:hover:text-white 
+   ipad:font-extralight ipad:ml-[18px] ipad:ext-center ipad:text-[#7d868b] ipad:mt-[5px] ipad:hover:text-white 
+   desktop:font-extralight desktop:ml-[18px] desktop:text-center desktop:text-[#7d868b] desktop:mt-[5px] desktop:hover:text-white  ">اطلاعات بیشتر</a>
+   </div>
+   </div>
+   </div>  
+   </div>
+   </div>
+   </div>
+   <hr class="
+   tablet:w-[98%] tablet:h-[2px] tablet:bg-[#c3c3c3] tablet:ml-[15px] tablet:mt-[15px]
+   ipad:w-[98%] ipad:h-[2px] ipad:bg-[#c3c3c3] ipad:ml-[15px] ipad:mt-[15px]
+   desktop:w-[98%] desktop:h-[2px] desktop:bg-[#c3c3c3] desktop:ml-[15px] desktop:mt-[15px]">
+               <div class="flex flex-row items-center justify-center w-full h-[100px]  bg-white dark:bg-[#1c1c1c]">
+<div class="flex flex-row toggle">
+    <label for="dark-toggle" class="flex items-center ">
+        <div class="relative">
+        <input type="checkbox" name="dark-mode" id="dark-toggle" class="hidden checkbox">
+        <div class="block border-[1px] dark:border-white border-[#1c1c1c] w-14 h-8 rounded-full"></div>
+        <div class="absolute w-6 h-6 transition bg-[#1c1c1c] rounded-full dot left-1 top-1 dark:bg-white"></div>
+        </div>
+        <div class="ml-3 font-medium text-[#1c1c1c] dark:text-white">
+        Dark Mode
+        </div>
+    </label>
+    </div>
+</div>
+ <!--end history-->
+ <!--start-->
+ <div class="w-[100%] h-[100%] dark:bg-[#1c1c1c]">
+ <div class="
+ dark:bg-[#1c1c1c]
+ mobile:w-[90%] mobile:h-[30px] mobile:ml-atuo mobile:mr-auto 
+ tablet:w-[680px] tablet:h-[30px] tablet:ml-auto tablet:mr-auto
+ ipad:w-[680px] ipad:h-[30px] ipad:ml-auto ipad:mr-auto 
+ desktop:w-[680px] desktop:h-[30px] desktop:ml-auto desktop:mr-auto ">
+  <h2 class="
+  mobile:text-xl  mobile:text-[#ff0000] mobile:text-right
+  tablet:text-xl  tablet:text-[#ff0000] tablet:text-right
+  ipad:text-xl  ipad:text-[#ff0000] ipad:text-right
+  desktop:text-xl  desktop:text-[#ff0000] desktop:text-right">معرفی گلستان</h2>
+ </div>
+ <div class="
+ dark:bg-[#1c1c1c]
+ mobile:w-[90%] mobile:h-[163px]  mobile:mt-[30px] mobile:ml-auto mobile:mr-auto mobile:text-right mobile:text-[#7C7D7E] moible:leading-[31px] mobile:tracking-[-0.4px]
+ tablet:w-[680px] tablet:h-[163px]  tablet:mt-[30px] tablet:ml-auto tablet:mr-auto tablet:text-right tablet:text-[#7C7D7E] tablet:leading-[31px] tablet:tracking-[-0.4px]
+ ipad:w-[680px] ipad:h-[163px]  ipad:mt-[30px] ipad:ml-auto ipad:mr-auto ipad:text-right ipad:text-[#7C7D7E] ipad:leading-[31px] ipad:tracking-[-0.4px]
+ desktop:w-[680px] desktop:h-[163px]  desktop:mt-[30px] desktop:ml-auto desktop:mr-auto desktop:text-right desktop:text-[#7C7D7E] desktop:leading-[31px] desktop:tracking-[-0.4px]">
+  <p>آنچه که امروز با نام مجموعه گلستان می‌شناسیم در سال 1329 بنیان نهاده شد. زمانی که شرکت گلستان فعالیت
+  خود را با بسته‌بندی و توزیع چای پاکتی آغاز کرد. با گذر زمان و رشد اقتصاد کشور، نهال «گلستان» به تدریج 
+  تقویت شد و شاخ و برگ گرفت . فعالیت‌های «گلستان» با تهیه ، تولید و بسته‌بندی بهترین محصولات غذایی
+  گسترش پیدا کرد. گلستان ؛ پس از سال‌ها تلاش ، همچنان می‌کوشد تا به کمک تجربه‌های اندوخته شده ، در این
+  سال‌ها کالاهایی قابل اعتماد و با کیفیت تولید نماید</p>
+ </div>
+  
+ <div class="
+ dark:bg-[#1c1c1c]
+ mobile:w-[90%] mobile:h-[90px]  mobile:mt-[60px] mobile:ml-auto mobile:mr-auto mobile:text-right mobile:text-[#7C7D7E] mobile:leading-[30px] mobile:tracking-[-0.3px]
+ tablet:w-[680px] tablet:h-[90px]  tablet:mt-[60px] tablet:ml-auto tablet:mr-auto tablet:text-right tablet:text-[#7C7D7E] tablet:leading-[30px] tablet:tracking-[-0.3px]
+ ipad:w-[680px] ipad:h-[90px]  ipad:mt-[60px] ipad:ml-auto ipad:mr-auto ipad:text-right ipad:text-[#7C7D7E] ipad:leading-[30px] ipad:tracking-[-0.3px]
+ desktop:w-[680px] desktop:h-[90px]  desktop:mt-[60px] desktop:ml-auto desktop:mr-auto desktop:text-right desktop:text-[#7C7D7E] desktop:leading-[30px] 
+ desktop:tracking-[-0.3px]">
+  <p>هدفمندی و برنامه‌ریزی موثر، ایمان و عزم راسخ برای دستیابی به اهداف تعیین شده، به کار گیری همکاران مجرب
+   و دلسوز، استفاده از روش های نوین بازاریابی و مشتری محوری از جمله عوامل مهم در استراتژی شرکت گلستان است</p>
+ </div>
+ <div class="
+ mobile:w-[90%] mobile:h-[30px] mobile:mt-[90px] mobile:ml-auto mobile:mr-auto
+ tablet:w-[680px] tablet:h-[30px] tablet:mt-[90px] tablet:ml-auto tablet:mr-auto
+ ipad:w-[680px] ipad:h-[30px] ipad:mt-[90px] ipad:ml-auto ipad:mr-auto
+ desktop:w-[680px] desktop:h-[30px] desktop:mt-[90px] desktop:ml-auto desktop;mr-auto">
+  <h2 class="
+  mobile:text-xl mobile:text-[#ff0000] mobile:text-right
+  tablet:text-xl  tablet:text-[#ff0000] tablet:text-right
+  ipad:text-xl  ipad:text-[#ff0000] ipad:text-right
+  desktop:text-xl  desktop:text-[#ff0000] desktop:text-right">محصولات گلستان</h2>
+ </div>
+ <div class="
+ mobile:w-[90%] mobile:h-[90px] mobile:mt-[30px] mobile:ml-auto mobile:mr-auto mobile:text-right mobile:text-[#7C7D7E] mobile:leading-[30px]
+ tablet:w-[680px] tablet:h-[90px] tablet:mt-[30px] tablet:ml-auto tablet:mr-auto tablet:text-right tablet:text-[#7C7D7E] tablet:leading-[30px]
+ ipad:w-[680px] ipad:h-[90px] ipad:mt-[30px] ipad:mlauto ipad:mr-auto ipad:text-right ipad:text-[#7C7D7E] ipad:leading-[30px]
+ desktop:w-[680px] desktop:h-[90px] desktop:mt-[30px] desktop:ml-auto desktop:mr-auto desktop:text-right desktop:text-[#7C7D7E] desktop:leading-[30px]">
+  <p>نام تجاری گلستان قدمتی به اندازه عمر شرکت گلستان دارد. گلستان ؛ ممتازترین محصولات خود را با این نام
+  تجاری عرضه می‌کند. مصرف‌کنندگان محصولات گلستان همواره از این نام تجاری خاطره محصولاتی ممتاز و
+  منحصر بفرد دارند و با اطمینان از نهایت کیفیت این نام تجاری حمایت می‌کنند</p>
+ </div>
+</div>
+ <div class="
+ dark:bg-[#1c1c1c]
+ mobile:hidden
+ tablet:w-[736px] tablet:h-[169px] tablet:mt-[150px] tablet:ml-auto tablet:mr-auto tablet:flex tablet:flex-row tablet:justify-between tablet:p-1
+ ipad:w-[800px] ipad:h-[184px] ipad:mt-[150px] ipad:ml-auto ipad:mr-auto ipad:flex ipad:flex-row ipad:justify-between
+ desktop:w-[800px] desktop:h-[184px] desktop:mt-[150px] desktop:ml-auto desktop:mr-auto desktop:flex desktop:flex-row desktop:justify-between
+ ">
+ <div class="
+ dark:bg-[#1c1c1c]
+ tablet:w-[169px] tablet:h-[169px]
+ ipad:w-[182px] ipad:h-[184px]
+ desktop:w-[182px] desktop:h-[184px] ">
+  <img src="./imag/main.image/900.png" alt="">
+ </div>
+ <div class="
+ dark:bg-[#1c1c1c]
+ tablet:w-[169px] tablet:h-[169px]
+ ipad:w-[182px] ipad:h-[184px]
+ desktop:w-[182px] desktop:h-[184px]">
+  <img src="./imag/main.image/550.png" alt="">
+ </div>
+ <div class="
+ dark:bg-[#1c1c1c]
+ tablet:w-[169px] tablet:h-[169px]
+ ipad:w-[182px] ipad:h-[184px]
+ desktop:w-[182px] desktop:h-[184px]">
+  <img src="./imag/main.image/80.png" alt="">
+ </div>
+ <div class="
+ dark:bg-[#1c1c1c]
+ tablet:w-[169px] tablet:h-[169px]
+ ipad:w-[182px] ipad:h-[184px]
+ desktop:w-[182px] desktop:h-[184px]">
+  <img src="./imag/main.image/2500.png" alt="">
+ </div>
+ </div>
+ <div class="
+ dark:bg-[#1c1c1c]
+ mobile:hidden
+ tablet:w-[736px] tablet:h-[63px]  tablet:mt-[2px] tablet:ml-auto tablet:mr-auto tablet:flex tablet:flex-row tablet:justify-between
+ ipad:w-[800px] ipad:h-[63px]  ipad:mt-[2px] ipad:ml-auto ipad:mr-auto ipad:flex ipad:flex-row ipad:justify-between
+ desktop:w-[800px] desktop:h-[63px] desktop:mt-[2px] desktop:ml-auto desktop:mr-auto desktop:flex desktop:flex-row desktop:justify-between">
+<div class="
+dark:bg-[#1c1c1c]
+tablet:w-[169px] tablet:h-[63px] tablet:border-b tablet:border-[#c3c3c3]
+ipad:w-[182px] ipad:h-[63px] ipad:border-b ipad:border-[#c3c3c3]
+desktop:w-[182px] 
+dark:bg-[#1c1c1c]desktop:h-[63px] desktop:border-b desktop:border-[#c3c3c3]">
+  <h2 class="
+  dark:bg-[#1c1c1c]
+  tablet:mt-4 tablet:text-center tablet:text-[#7C7D7E]
+  ipad:mt-4 ipad:text-center ipad:text-[#7C7D7E]
+  desktop:mt-4 desktop:text-center desktop:text-[#7C7D7E]"> مشتریان گلستان</h2>
+</div>
+<div class="
+dark:bg-[#1c1c1c]
+tablet:w-[169px] tablet:h-[63px] tablet:border-b tablet:border-[#c3c3c3]
+ipad:w-[182px] ipad:h-[63px] ipad:border-b ipad:border-[#c3c3c3]
+desktop:w-[182px] desktop:h-[63px] desktop:border-b desktop:border-[#c3c3c3]">
+  <h2 class="
+  tablet:mt-4 tablet:text-center tablet:text-[#7C7D7E]
+  ipad:mt-4 ipad:text-center ipad:text-[#7C7D7E]
+  desktop:mt-4 desktop:text-center desktop:text-[#7C7D7E]"> محصولات گلستان</h2>
+</div>
+<div class="
+dark:bg-[#1c1c1c]
+tablet:w-[169px] tablet:h-[63px] tablet:border-b tablet:border-[#c3c3c3]
+ipad:w-[182px] ipad:h-[63px] ipad:border-b ipad:border-[#c3c3c3]
+desktop:w-[182px] desktop:h-[63px] desktop:border-b desktop:border-[#c3c3c3]">
+  <h2 class="
+  tablet:mt-4 tablet:text-center tablet:text-[#7C7D7E]
+  ipad:mt-4 ipad:text-center ipad:text-[#7C7D7E]
+  desktop:mt-4 desktop:text-center desktop:text-[#7C7D7E]">مراکز فروش</h2>
+</div>
+<div class="
+dark:bg-[#1c1c1c]
+tablet:w-[169px] tablet:h-[63px] tablet:border-b tablet:border-[#c3c3c3]
+ipad:w-[182px] ipad:h-[63px] ipad:border-b ipad:border-[#c3c3c3]
+desktop:w-[182px] desktop:h-[63px] desktop:border-b desktop:border-[#c3c3c3]">
+  <h2 class="
+  tablet:mt-4 tablet:text-center tablet:text-[#7C7D7E]
+  ipad:mt-4 ipad:text-center ipad:text-[#7C7D7E]
+  desktop:mt-4 desktop:text-center desktop:text-[#7C7D7E]">سرمایه انسانی</h2>
+</div>
+</div>
+<hr class="
+mobile:w-[98%] mobile:h-[2px] mobile:bg-[#c3c3c3] mobile:ml-auto mobile:mr-auto mobile:mt-[139px]
+tablet:w-[98%] tablet:h-[2px] tablet:bg-[#c3c3c3] tablet:ml-auto tablet:mr-auto tablet:mt-[139px]
+ipad:w-[98%] ipad:h-[2px] ipad:bg-[#c3c3c3] ipad:ml-auto ipad:mr-auto ipad:mt-[139px]
+desktop:w-[98%] desktop:h-[2px] desktop:bg-[#c3c3c3] desktop:ml-auto desktop:mr-auto desktop:mt-[139px] ">
+
+
+
+
+
+
+
+<div class="
+dark:bg-[#1c1c1c]
+mobile:w-[100%] mobile:h-[490px]  mobile:mt-[20px] mobile:bg-no-repeat mobile:bg-center mobile:bg-cover mobile:border-b-[20px] mobile:border-[#e9d69f] mobile:flex
+tablet:w-[100%] tablet:h-[490px] tablet:mt-[20px] tablet:bg-no-repeat tablet:bg-center tablet:bg-cover tablet:border-b-[20px] tablet:border-[#e9d69f] tablet:flex
+ipad:w-[100%] ipad:h-[490px]  ipad:mt-[20px] ipad:bg-no-repeat ipad:bg-center ipad:bg-cover ipad:border-b-[20px] ipad:border-[#e9d69f] ipad:flex
+desktop:w-[100%] desktop:h-[490px]  desktop:mt-[20px] desktop:bg-no-repeat desktop:bg-center desktop:bg-cover desktop:border-b-[20px] desktop:border-[#e9d69f] flex"
+ style="background-image: url(./imag/main.image/RICE.png)">
+ <div class="
+ 
+ mobile:w-[100%] mobile:h-[100px] mobile:bg-[#ed1c24] mobile:mt-auto
+ tablet:w-[300px] tablet:h-[100px] tablet:bg-[#ed1c24] tablet:ml-[54%] tablet:mt-auto
+ ipad:w-[300px] ipad:h-[100px] ipad:bg-[#ed1c24] ipad:ml-[54%] ipad:mt-auto
+ desktop:w-[300px] desktop:h-[100px] desktop:bg-[#ed1c24] desktop:ml-[54%] desktop:mt-auto">
+  <h1 class="
+  mobile:text-[30px] mobile:text-right mobile:text-white mobile:mr-[30px]
+  tablet:text-[30px] tablet:text-right tablet:text-white tablet:mr-[30px]
+  ipad:text-[30px] ipad:text-right ipad:text-white ipad:mr-[30px]
+  desktop:text-[30px] desktop:text-right desktop:text-white desktop:mr-[30px]">برنج گلستان</h1>
+  <h3 class="
+  mobile:text-right mobile:text-white mobile:mt-[12px] mobile:mr-[30px]
+  tablet:text-right tablet:text-white tablet:mt-[12px] tablet:mr-[30px]
+  ipad:text-right ipad:text-white ipad:mt-[12px] ipad:mr-[30px]
+  desktop:text-right desktop:text-white desktop:mt-[12px] desktop:mr-[30px]">معرفی محصول</h3>
+ </div>
+</div>
+ <hr class="
+ mobile:w-[98%] mobile:h-[2px] mobile:bg-[#c3c3c3] mobile:ml-auto mobile:mr-auto mobile:mt-[30px]
+ tablet:w-[98%] tablet:h-[2px] tablet:bg-[#c3c3c3] tablet:ml-auto tablet:mr-auto tablet:mt-[30px]
+ ipad:w-[98%] ipad:h-[2px] ipad:bg-[#c3c3c3] ipad:ml-auto ipad:mr-auto ipad:mt-[30px]
+ desktop:w-[98%] desktop:h-[2px] desktop:bg-[#c3c3c3] desktop:ml-auto desktop:mr-auto desktop:mt-[30px]">
+
+<div class="
+mobile:w-[90%] mobile:h-[30px] mobile:ml-auto mobile:mr-auto mobile:mt-[60px]
+tablet:w-[680px] tablet:h-[30px] tablet:ml-auto tablet:mr-auto tablet:mt-[60px]
+ipad:w-[680px] ipad:h-[30px] ipad:ml-auto ipad:mr-auto ipad:mt-[60px]
+desktop:w-[680px] desktop:h-[30px] desktop:ml-auto desktop:mr-auto desktop:mt-[60px]">
+ <h2 class="
+ mobile:text-xl  mobile:text-[#ff0000] mobile:text-right
+ tablet:text-xl  tablet:text-[#ff0000] tablet:text-right
+ ipad:text-xl  ipad:text-[#ff0000] ipad:text-right
+ desktop:text-xl  desktop:text-[#ff0000] desktop:text-right">رکن اول غذای ایرانی</h2>
+</div>
+<div class="
+mobile:w-[90%] mobile:h-auto  mobile:mt-[30px] mobile:ml-auto mobile:mr-auto mobile:text-right mobile:text-[#7C7D7E] mobile:leading-[33px] 
+mobile:tracking-[-0.2px] 
+mobile:text-[15.1px]
+tablet:w-[680px] tablet:h-[120px]  tablet:mt-[30px] tablet:ml-auto tablet:mr-auto tablet:text-right tablet:text-[#7C7D7E] tablet:leading-[33px]
+tablet:tracking-[-0.2px] 
+tablet:text-[15.1px]
+ipad:w-[680px] ipad:h-[120px]  ipad:mt-[30px] ipad:ml-auto ipad:mr-auto ipad:text-right ipad:text-[#7C7D7E] ipad:leading-[33px] ipad:tracking-[-0.2px] 
+ipad:text-[15.1px]
+deasktop:w-[680px] desktop:h-[120px]  desktoop:mt-[30px] desktop:ml-auto desktop:mr-auto desktop:text-right desktop:text-[#7C7D7E] desktop:leading-[33px] 
+desktop:tracking-[-0.2px] 
+desktop:text-[15.1px]">
+ <p>مرغوب‌ترین برنج دنیا، برنج ایران است و بهترین نوع برنج ایرانی،‌ طارم و هاشمی. این برنج‌ها از بهترین شالیزارهای 
+   مازندران برداشت شده پس از كنترل كیفیت درآزمایشگاه‌های تخصصی گلستان وارد چرخه بسته‌بندی و در وزن‌های
+   مختلف به بازار ها عرضه می‌شوند . عطر و طعم بی‌نظیر برنج گلستان با هیچ برنج دیگری قابل مقایسه نیست . با
+    گلستان،‌ كیفیت زندگی بالاتر از همیشه است چرا كه مشتریان گلستان؛‌ لایق بهترین‌ها هستند</p>
+</div>
+<div class="
+mobile:w-[90%] mobile:h-[40px] mobile:ml-auto mobile:mr-auto 
+tablet:w-[680px] tablet:h-[40px] tablet:ml-auto tablet:mr-auto
+ipad:w-[680px] ipad:h-[40px] ipad:ml-auto ipad:mr-auto
+desktop:w-[680px] desktop:h-[40px] desktop:ml-auto desktop:mr-auto">
+<div class="
+mobile:flex mobile:flex-row mobile:justify-between mobile:mt-[50px] mobile:w-[290px] mobile:h-[40px] mobile:ml-auto 
+tablet:flex tablet:flex-row tablet:justify-between tablet:mt-[50px] tablet:w-[290px] tablet:h-[40px] tablet:ml-auto 
+ipad:flex ipad:flex-row ipad:justify-between ipad:mt-[50px] ipad:w-[290px] ipad:h-[40px] ipad:ml-auto 
+desktop:flex desktop:flex-row desktop:justify-between desktop:mt-[50px] desktop:w-[290px] desktop:h-[40px] desktop:ml-auto ">
+
+  <div class="
+  mobile:w-[150px] mobile:h-[40px]  mobile:border-[#b4bfc7] mobile:rounded-[9px] mobile:border-[1px] mobile:flex  mobile:hover:bg-[#ff0000] mobile:bg-white  
+  tablet:w-[150px] tablet:h-[40px] tablet:border-[#b4bfc7] tablet:rounded-[9px] tablet:border-[1px] tablet:flex tablet:hover:bg-[#ff0000] tablet:bg-white
+  ipad:w-[150px] ipad:h-[40px]  ipad:border-[#b4bfc7] ipad:rounded-[9px] ipad:border-[1px] ipad:flex ipad:hover:bg-[#ff0000] ipad:bg-white
+  desktop:w-[150px] desktop:h-[40px] desktop:border-[#b4bfc7] desktop:rounded-[9px] desktop:border-[1px] desktop:flex desktop:hover:bg-[#ff0000] desktop:bg-white">
+   <a href="#" class="
+   mobile:font-extralight mobile:ml-[21px]  mobile:text-center mobile:text-[#7d868b] mobile:hover:text-white mobile:text-[17px]  mobile:mt-[6px] 
+   tablet:font-extralight tablet:ml-[21px]  tablet:text-center tablet:text-[#7d868b] tablet:hover:text-white  tablet:text-[17px] tablet:mt-[6px]
+   ipad:font-extralight ipad:ml-[21px]  ipad:text-center ipad:text-[#7d868b] ipad:hover:text-white  ipad:text-[17px] ipad:mt-[6px]
+   desktop:font-extralight desktop:ml-[21px] desktop:text-center desktop:text-[#7d868b] desktop:hover:text-white desktop:text-[17px]  desktop:mt-[6px]">آشپزخانه گلستان</a>
+</div>
+<div class="
+mobile:w-[9px] mobile:h-[41px]
+tablet:w-[9px] tablet:h-[41px]
+ipad:w-[9px] ipad:h-[41px]
+desktop:w-[9px] desktop:h-[41px]
+"></div>
+ <div class="
+ mobile:w-[150px] mobile:h-[41px]  mobile:border-[#b4bfc7] mobile:rounded-[9px] mobile:border-[1px] mobile:flex  mobile:hover:bg-[#ff0000] mobile:bg-white
+ tablet:w-[150px] tablet:h-[41px]  tablet:border-[#b4bfc7] tablet:rounded-[9px] tablet:border-[1px] tablet:flex tablet:hover:bg-[#ff0000] tablet:bg-white
+ ipad:w-[150px] ipad:h-[41px]  ipad:border-[#b4bfc7] ipad:rounded-[9px] ipad:border-[1px] ipad:flex hover:bg-[#ff0000] ipad:bg-white
+ desktop:w-[150px] desktop:h-[41px] desktop:border-[#b4bfc7] desktop:rounded-[9px] desktop:border-[1px] desktop:flex desktop:hover:bg-[#ff0000] desktop:bg-white">
+   <a href="#" class="
+   mobile:font-extralight mobile:ml-[29px] mobile:text-center mobile:text-[#7d868b] mobile:mt-[6px] mobile:hover:text-white  
+   tablet:font-extralight tablet:ml-[29px] tablet:text-center tablet:text-[#7d868b] tablet:mt-[6px] tablet:hover:text-white  
+   ipad:font-extralight ipad:ml-[29px] ipad:text-center ipad:text-[#7d868b] ipad:mt-[6px] ipad:hover:text-white  
+   desktop:font-extralight desktop:ml-[29px] desktop:text-center desktop:text-[#7d868b] desktop:mt-[6px] desktop:hover:text-white  ">محصولات برنج</a>
+</div>
+</div>
+</div>
+<div class="
+mobile:w-[100%] mobile:h-[490px]  mobile:mt-[20px] mobile:bg-no-repeat mobile:bg-center mobile:bg-cover mobile:border-b-[20px] mobile:border-[#e9d69f] mobile:flex
+tablet:w-[100%] tablet:h-[490px] tablet:mt-[20px] tablet:bg-no-repeat tablet:bg-center tablet:bg-cover tablet:border-b-[20px] tablet:border-[#e9d69f] tablet:flex
+ipad:w-[100%] ipad:h-[490px]  ipad:mt-[20px] ipad:bg-no-repeat ipad:bg-center ipad:bg-cover ipad:border-b-[20px] ipad:border-[#e9d69f] ipad:flex
+desktop:w-[100%] desktop:h-[490px]  desktop:mt-[20px] desktop:bg-no-repeat desktop:bg-center desktop:bg-cover desktop:border-b-[20px] desktop:border-[#e9d69f] flex"
+ style="background-image: url(./imag/main.image/tea.png)">
+ <div class="
+ mobile:w-[100%] mobile:h-[100px] mobile:bg-[#ed1c24] mobile:mt-auto
+ tablet:w-[300px] tablet:h-[100px] tablet:bg-[#ed1c24] tablet:ml-[54%] tablet:mt-auto
+ ipad:w-[300px] ipad:h-[100px] ipad:bg-[#ed1c24] ipad:ml-[54%] ipad:mt-auto
+ desktop:w-[300px] desktop:h-[100px] desktop:bg-[#ed1c24] desktop:ml-[54%] desktop:mt-auto">
+  <h1 class="text-[30px] text-right text-white mr-[30px]">چای گلستان</h1>
+  <h3 class="text-right text-white mt-[12px] mr-[30px]">معرفی محصول</h3>
+ </div>
+ </div>
+ <hr class="
+ mobile:w-[98%] mobile:h-[2px] mobile:bg-[#c3c3c3] mobile:ml-auto mobile:mr-auto mobile:mt-[30px]
+ tablet:w-[98%] tablet:h-[2px] tablet:bg-[#c3c3c3] tablet:ml-auto tablet:mr-auto tablet:mt-[30px]
+ ipad:w-[98%] ipad:h-[2px] ipad:bg-[#c3c3c3] ipad:ml-auto ipad:mr-auto ipad:mt-[30px]
+ desktop:w-[98%] desktop:h-[2px] desktop:bg-[#c3c3c3] desktop:ml-auto desktop:mr-auto desktop:mt-[30px]">
+
+
+
+ <div class="
+ mobile:w-[90%] mobile:h-[30px] mobile:ml-auto mobile:mr-auto mobile:mt-[60px] 
+ tablet:w-[680px] tablet:h-[30px] tablet:ml-auto tablet:mr-auto tablet:mt-[60px] 
+ ipad:w-[680px] ipad:h-[30px] ipad:ml-auto ipad:mr-auto ipad:mt-[60px] 
+ desktop:w-[680px] desktop:h-[30px] desktop:ml-auto desktop:mr-auto desktop:mt-[60px] ">
+  <h2 class="
+  mobile:text-xl  mobile:text-[#ff0000] mobile:text-right
+  tablet:text-xl  tablet:text-[#ff0000] tablet:text-right
+  ipad:text-xl  ipad:text-[#ff0000] ipad:text-right
+  desktop:text-xl  desktop:text-[#ff0000] desktop:text-right">سابقه ای به قدمت یک عمر</h2>
+ </div>
+ <div class="
+ mobile:w-[90%] mobile:h-auto  mobile:mt-[30px] mobile:ml-auto mobile:mr-auto mobile:text-right mobile:text-[#7C7D7E] mobile:leading-[31px] mobile:tracking-[-0.4px]
+ tablet:w-[680px] tablet:h-[90px]  tablet:mt-[30px] tablet:ml-auto tablet:mr-auto tablet:text-right tableT:text-[#7C7D7E] tablet:leading-[31px] tablet:tracking-[-0.4px]
+ ipad:w-[680px] ipad:h-[90px]  ipad:mt-[30px] ipad:ml-auto ipad:mr-auto ipad:text-right ipad:text-[#7C7D7E] ipad:leading-[31px] ipad:tracking-[-0.4px]
+ desktop:w-[680px] desktop:h-[90px]  desktop:mt-[30px] desktop:ml-auto desktop:mr-auto desktop:text-right desktop:text-[#7C7D7E] desktop:leading-[31px] 
+ desktop:tracking-[-0.4px]">
+  <p>چای تنها یك نوشیدنی گرم نیست.‌ یک گفتمان است؛‌ گرمابخش وجود و بهانه‌ای برای آغاز یك معاشرت دل‌چسب. بی‌دلیل نیست كه نام «محبوب‌ترین نوشیدنی دنیا» را با خود یدک می‌كشد. نوشیدنش خستگی‌ها را فراری داده،‌ حس خوب آرامش را به همراه دارد</p>
+ </div>
+ <div class="
+ mobile:w-[90%] mobile:h-auto  mobile:mt-[60px] mobile:ml-auto mobile:mr-auto mobile:text-right mobile:text-[#7C7D7E] mobile:leading-[36px] mobile:tracking-[0.2px]
+ tablet:w-[670px] tablet:h-[100px]  tablet:mt-[60px] tablet:ml-auto tablet:mr-auto tablet:text-right tablet:text-[#7C7D7E] tablet:leading-[36px] tablet:tracking-[0.2px]
+ ipad:w-[670px] ipad:h-[100px]  ipad:mt-[60px] ipad:ml-auto ipad:mr-auto ipad:text-right ipad:text-[#7C7D7E] ipad:leading-[36px] ipad:tracking-[0.2px]
+ desktop:w-[670px] desktop:h-[100px] desktop:mt-[60px] desktop:ml-auto desktop:mr-auto desktop:text-right desktop:text-[#7C7D7E] desktop:leading-[36px] 
+ desktop:tracking-[0.2px]">
+  <p>برای مردمان ایران زمین نام گلستان با چای پیوند خورده است؛‌ قدیمی‌ترین محصول مجموعه گلستان،‌با
+     مدرن‌ترین و بهداشتی‌ترین دستگاه‌روز دنیا تهیه و بسته‌بندی می‌شود . چیزی كه باعث شده مشتریانش یك عمر به نام گلستان اعتماد كنند، كیفیت، ‌عطر و طعم به یادماندنی آن است</p>
+ </div>
+ <div class="
+ mobile:w-[90%] mobile:h-[40px] mobile:ml-auto mobile:mr-auto mobile:mt-[50px]
+ tablet:w-[680px] tablet:h-[40px] tablet:ml-auto tablet:mr-auto tablet:mt-[50px]
+ ipad:w-[680px] ipad:h-[40px] ipad:ml-auto ipad:mr-auto ipad:mt-[50px]
+ desktop:w-[680px] desktop:h-[40px] desktop:ml-auto desktop:mr-auto desktop:mt-[50px]">
+  <div class="
+  mobile:w-[136px] mobile:h-[40px] mobile:m-[10px] mobile:border-[#b4bfc7] mobile:rounded-[9px] mobile:border-[1px]   mobile:flex mobile:ml-auto
+  mobile:hover:bg-[#ff0000] mobile:bg-white
+  tablet:w-[136px] tablet:h-[40px] tablet:m-[10px] tablet:border-[#b4bfc7] tablet:rounded-[9px] tablet:border-[1px]  tablet:flex tablet:ml-auto
+  tablet:hover:bg-[#ff0000] tablet:bg-white
+  ipad:w-[136px] ipad:h-[40px] ipad:m-[10px] ipad:border-[#b4bfc7] ipad:rounded-[9px] ipad:border-[1px]  ipad:flex    ipad:ml-auto
+  ipad:hover:bg-[#ff0000] ipad:bg-white
+  desktop:w-[136px] desktop:h-[40px] desktop:m-[10px] desktop:border-[#b4bfc7] desktop:rounded-[9px] desktop:border-[1px] desktop:flex desktop:ml-auto
+  desktop:hover:bg-[#ff0000] desktop::bg-white">
+   <a href="#" class="
+   mobile:font-extralight mobile:ml-[24px] mobile:text-center mobile:text-[#7d868b] mobile:mt-[5px] mobile:hover:text-white mobile:text-[17px]
+   tablet:font-extralight tablet:ml-[24px] tablet:text-center tablet:text-[#7d868b] tablet:mt-[5px] tablet:hover:text-white tablet:text-[17px]
+   ipad:font-extralight ipad:ml-[24px] ipad:text-center ipad:text-[#7d868b] ipad:mt-[5px] ipad:hover:text-white ipad:text-[17px]
+   desktop:font-extralight desktop:ml-[24px] desktop:text-center desktop:text-[#7d868b] desktop:mt-[5px] desktop:hover:text-white desktop:text-[17px] ">محصولات چای</a>
+ </div>
+ </div>
+ </div>
+
+
+
+<div class="w-[100%] h-[490px]  mt-[80px] bg-no-repeat bg-center bg-cover border-b-[20px] flex
+border-[#e9d69f] "
+ style="background-image: url(./imag/main.image/peste.png)">
+ <div class="
+ mobile:w-[100%] mobile:h-[100px] mobile:bg-[#ed1c24] mobile:mt-auto
+ tablet:w-[300px] tablet:h-[100px] tablet:bg-[#ed1c24] tablet:ml-[54%] tablet:mt-auto
+ ipad:w-[300px] ipad:h-[100px] ipad:bg-[#ed1c24] ipad:ml-[54%] ipad:mt-auto
+ desktop:w-[300px] desktop:h-[100px] desktop:bg-[#ed1c24] desktop:ml-[54%] desktop:mt-auto">
+  <h1 class="text-[30px] text-right text-white mr-[30px]">پسته گلستان</h1>
+  <h3 class="text-right text-white mt-[12px] mr-[30px]">معرفی محصول</h3>
+ </div>
+ </div>
+  <hr class="
+ mobile:w-[98%] mobile:h-[2px] mobile:bg-[#c3c3c3] mobile:ml-auto mobile:mr-auto mobile:mt-[30px]
+ tablet:w-[98%] tablet:h-[2px] tablet:bg-[#c3c3c3] tablet:ml-auto tablet:mr-auto tablet:mt-[30px]
+ ipad:w-[98%] ipad:h-[2px] ipad:bg-[#c3c3c3] ipad:ml-auto ipad:mr-auto ipad:mt-[30px]
+ desktop:w-[98%] desktop:h-[2px] desktop:bg-[#c3c3c3] desktop:ml-auto desktop:mr-auto desktop:mt-[30px]">
+
+<div class="
+mobile:w-[90%] mobile:h-[30px] mobile:ml-auto mobile:mr-auto mobile:mt-[60px]
+tablet:w-[680px] tablet:h-[30px] tablet:ml-auto tablet:mr-auto tablet:mt-[60px]
+ipad:w-[680px] ipad:h-[30px] ipad:ml-auto ipad:mr-auto ipad:mt-[60px]
+desktop:w-[680px] desktop:h-[30px] desktop:ml-auto desktop:mr-auto desktop:mt-[60px]">
+ <h2 class="
+ mobile:text-xl  mobile:text-[#ff0000] mobile:text-right
+ tablet:text-xl  tablet:text-[#ff0000] tablet:text-right
+ ipad:text-xl  ipad:text-[#ff0000] ipad:text-right
+ desktop:text-xl  desktop:text-[#ff0000] desktop:text-right">آجيل‌های خوش خنده</h2>
+</div>
+<div class="
+mobile:w-[90%] mobile:h-auto  mobile:mt-[30px] mobile:ml-auto mobile:mr-auto mobile:text-right mobile:text-[#7C7D7E] mobile:leading-[36px] mobile:tracking-[-0.4px]
+tablet:w-[680px] tablet:h-[90px]  tablet:mt-[30px] tablet:ml-auto tablet:mr-auto tablet:text-right tablet:text-[#7C7D7E] tablet:leading-[36px] tablet:tracking-[-0.4px]
+ipad:w-[680px] ipad:h-[90px]  ipad:mt-[30px] ipad:ml-auto ipad:mr-auto ipad:text-right ipad:text-[#7C7D7E] ipad:leading-[36px] ipad:tracking-[-0.4px]
+desktop:w-[680px] desktop:h-[90px] desktop:mt-[30px] desktop:ml-auto desktop:mr-auto desktop:text-right desktop:text-[#7C7D7E] desktop:leading-[36px]
+desktop:tracking-[-0.4px]">
+ <p>خواص فوق‌العاده پسته بر كسی پوشیده نیست. پسته را منبع ویتامین و مواد معدنی می‌نامند، یك پمپ خون‌ساز قوی و تسكین دهنده قلب و اعصاب</p>
+</div>
+<div class="
+mobile:w-[90%] mobile:h-auto  mobile:mt-[18px] mobile:ml-auto mobile:mr-auto mobile:text-right mobile:text-[#7C7D7E] mobile:leading-[36px]
+tablet:w-[670px] tablet:h-[100px]  tablet:mt-[18px] tablet:ml-auto tablet:mr-auto tablet:text-right tablet:text-[#7C7D7E] tablet:leading-[36px]
+ipad:w-[670px] ipad:h-[100px]  ipad:mt-[18px] ipad:ml-auto ipad:mr-auto ipad:text-right ipad:text-[#7C7D7E] ipad:leading-[36px]
+desktop:w-[670px] desktop:h-[100px]  desktop:mt-[18px] desktop:ml-auto desktop:mr-auto desktop:text-right desktop:text-[#7C7D7E] desktop:leading-[36px]">
+ <p>پسته گلستان اما حسابش از دیگر پسته‌های بازار جداست . مرغوب‌ترین پسته خام از بهترین باغ‌های پسته ایران
+   دستچین می‌شود.‌ پس از كنترل كیفیت در آزمایشگاه و اطمینان از سلامت محصول،‌ با زعفران درجه یک و نمک،
+   بوداده و برشته شده و‌ پسته گلستان را با طعم و رنگ و عطری بی‌نظیر به ارمغان می‌آورد</p>
+</div>
+<div class="
+mobile:w-[90%] mobile:h-[40px] mobile:ml-auto mobile:mr-auto mobile:mt-[50px]
+tablet:w-[670px] tablet:h-[40px] tablet:ml-auto tablet:mr-auto tablet:mt-[50px]
+ipad:w-[670px] ipad:h-[40px] ipad:ml-auto ipad:mr-auto ipad:mt-[50px]
+desktop:w-[670px] desktop:h-[40px] desktop:ml-auto desktop:mr-auto desktop:mt-[50px]">
+ <div class="
+ mobile:w-[136px] mobile:h-[40px] mobile:m-[10px] mobile:border-[#b4bfc7] mobile:rounded-[9px] mobile:border-[1px] mobile:ml-auto mobile:flex mobile:hover:bg-[#ff0000] mobile:bg-white
+ tablet:w-[136px] tablet:h-[40px] tablet:m-[10px] tablet:border-[#b4bfc7] tablet:rounded-[9px] tablet:border-[1px] tablet:ml-auto tablet:flex tablet:hover:bg-[#ff0000] tablet:bg-white
+ ipad:w-[136px] ipad:h-[40px] ipad:m-[10px] ipad:border-[#b4bfc7] ipad:rounded-[9px] ipad:border-[1px] ipad:ml-auto ipad:flex ipad:hover:bg-[#ff0000] ipad:bg-white
+ desktop:w-[136px] desktop:h-[40px] desktop:m-[10px] desktop:border-[#b4bfc7] desktop:rounded-[9px] desktop:border-[1px] desktop:ml-auto  desktop:flex desktop:hover:bg-[#ff0000] desktop:bg-white">
+  <a href="#" class="
+  mobile:font-extralight mobile:ml-[24px] mobile:text-center mobile:text-[#7d868b] mobile:mt-[5px] mobile:hover:text-white mobile:text-[17px]
+  tablet:font-extralight tablet:ml-[24px] tablet:text-center tablet:text-[#7d868b] tablet:mt-[5px] tablet:hover:text-white tablet:text-[17px]
+  ipad:font-extralight ipad:ml-[24px] ipad:text-center ipad:text-[#7d868b] ipad:mt-[5px] ipad:hover:text-white ipad:text-[17px]
+  desktop:font-extralight desktop:ml-[24px] desktop:text-center desktop:text-[#7d868b] desktop:mt-[5px] desktop:hover:text-white desktop:text-[17px] ">ناتس گلستان</a>
+ </div>
+</div>
+</div>
+ 
+<div class="
+mobile:w-[100%] mobile:h-[200px] mobile:bg-slate-400 mobile:mt-[50px] mobile:bg-center mobile:bg-contain mobile:bg-fixed
+tablet:w-[100%] tablet:h-[200px] tablet:bg-slate-400 tablet:mt-[50px] tablet:bg-center tablet:bg-contain tablet:bg-fixed
+ipad:w-[100%] ipad:h-[200px] ipad:bg-slate-400 ipad:mt-[50px] ipad:bg-center ipad:bg-contain ipad:bg-fixed
+desktop:w-[100%] desktop:h-[200px] desktop:bg-slate-400 desktop:mt-[50px] desktop:bg-center desktop:bg-contain desktop:bg-fixed"
+style="background-image: url(./imag/main.image/background.png)">
+</div>
+<div class="
+mobile:w-[96%] mobile:h-[30px] mobile:mt-[45px]
+tablet:w-[100%] tablet:h-[30px] tablet:mt-[45px]
+ipad:w-[100%] ipad:h-[30px] ipad:mt-[45px]
+desktop:w-[100%] desktop:h-[30px] desktop:mt-[45px]">
+  <h2 class="
+  mobile:text-xl  mobile:text-[#ff0000] mobile:text-right  mobile:mr-auto mobile:ml-auto
+  tablet:text-xl  tablet:text-[#ff0000] tablet:text-right  tablet:mr-[20%]
+  ipad:text-xl  ipad:text-[#ff0000] ipad:text-right  ipad:mr-[20%]
+  desktop:text-xl  desktop:text-[#ff0000] desktop:text-right  desktop:mr-[20%]">مجله گلستان</h2>
+</div>
+<div class="
+desktop:hidden
+mobile:w-[100%] mobile:h-[1320px] mobile:bg-[#cde4b0] mobile:mt-[45px] mobile:ml-auto mobile:mr-auto 
+tablet:w-[100%] tablet:h-[770px] tablet:bg-[#cde4b0] tablet:mt-[45px] tablet:ml-auto tablet:mr-auto
+ipad:w-[100%] ipad:h-[770px] ipad:bg-[#cde4b0] ipad:mt-[45px] ipad:ml-auto ipad:mr-auto">
+  <div class="
+  mobile:w-[320px] mobile:h-[600px] mobile:flex mobile:flex-row mobile:flex-wrap mobile:ml-auto mobile:mr-auto 
+  tablet:w-[649px] tablet:h-[600px] tablet:flex tablet:flex-row tablet:justify-between tablet:ml-auto tablet:mr-auto
+  ipad:w-[649px] ipad:h-[600px] ipaD:flex ipad:flex-row ipad:justify-between ipad:ml-auto ipad:mr-auto">
+  <div class="
+  mobile:bg-white mobile:mt-[40px]
+  tablet:w-[318px] tablet:h-[600px] tablet:bg-white tablet:mt-[85px]
+  ipad:w-[318px] ipad:h-[600px] ipad:bg-white ipad:mt-[85px]">
+    <div class="
+    mobile:w-[318px] mobile:h-[309px]
+    tablet:w-[318px] tablet:h-[309px]
+    ipad:w-[318px] ipad:h-[309px]">
+      <img class="
+      mobile:h-[309px]
+      tablet:h-[309px]
+      ipad:h-[309px]"  src="./imag/main.image/ghaza.2.png" alt="">
+      </div>
+     <div class="
+     mobile:w-[318px] mobile:h-[292px]
+     tablet:w-[318px] tablet:h-[292px]
+     ipad:w-[318px] ipad:h-[292px]">
+      <div class="
+      mobile:w-[318px] mobile:h-[70px] mobile:flex
+      tablet:w-[318px] tablet:h-[70px] tablet:flex
+      ipad:w-[318px] ipad:h-[70px] ipad:flex">
+        <h1 class="
+        mobile:text-xl  mobile:text-[#ff0000] mobile:mt-[10%] mobile:ml-[70%] 
+        tablet:text-xl  tablet:text-[#ff0000] tablet:mt-[10%] tablet:ml-[70%] 
+        ipad:text-xl  ipad:text-[#ff0000] ipad:mt-[10%] ipad:ml-[70%] ">چیلا کیله</h1>
+      </div>
+       <div class="
+       mobile:w-[273px] mobile:h-[85px] mobile:flex mobile:ml-[6%] mobile:mt-[9px]
+       tablet:w-[273px] tablet:h-[85px] tablet:flex tablet:ml-[6%] tablet:mt-[9px]
+       ipad:w-[273px] ipad:h-[85px] ipad:flex ipad:ml-[6%] ipad:mt-[9px]">
+        <p class="
+        mobile:text-[13px] mobile:text-right mobile:mr-[px] mobile:leading-[30px] mobile:tracking-[0.3px]
+        tablet:text-[13px] tablet:text-right tablet:mr-[px] tablet:leading-[30px] tablet:tracking-[0.3px]
+        ipad:text-[13px] ipad:text-right ipad:mr-[px] ipad:leading-[30px] ipad:tracking-[0.3px]">
+          احتمالا نام چیلا کیله را نشنیده باشید ولی اگر یکبار
+           این غذای، فوق‌العاده خوشمزه را تهیه کنید و نوش
+          جان کنید جزئی جدانشدنی از فهرست</p>
+       </div>
+        <div class="
+ mobile:w-[318px] mobile:h-[130px] mobile:flex
+ tablet:w-[318px] tablet:h-[130px] tablet:flex
+ ipad:w-[318px] ipad:h-[130px] flex">
+   <div class="
+   mobile:w-[107px] mobile:h-[40px]  mobile:border-[#b4bfc7] mobile:rounded-[9px] mobile:border-[1px] mobile:flex mobile:hover:bg-[#ff0000] mobile:bg-white 
+   mobile:mt-[20%] mobile:ml-[59%]
+   tablet:w-[107px] tablet:h-[40px]  tablet:border-[#b4bfc7] tablet:rounded-[9px] tablet:border-[1px] tablet:flex tablet:hover:bg-[#ff0000] tablet:bg-white 
+   tablet:mt-[20%] tablet:ml-[59%]
+   ipad:w-[107px] ipad:h-[40px]  ipad:border-[#b4bfc7] ipad:rounded-[9px] ipad:border-[1px] ipad:flex ipad:hover:bg-[#ff0000] ipad:bg-white ipad:mt-[20%] ipad:ml-[59%]">
+   <a href="#" class="
+   mobile:font-extralight  mobile:text-center mobile:text-[#7d868b]  mobile:hover:text-white mobile:text-[14px] mobile:mt-[6%] mobile:ml-[18%]
+   tablet:font-extralight  tablet:text-center tablet:text-[#7d868b]  tablet:hover:text-white tablet:text-[14px] tablet:mt-[6%] tablet:ml-[18%]
+   ipad:font-extralight  ipad:text-center ipad:text-[#7d868b]  ipad:hover:text-white ipad:text-[14px] ipad:mt-[6%] ipad:ml-[18%]">ادامه مطلب</a>
+         </div>
+       </div>
+     </div>
+     </div>
+  <div class="
+  mobile:w-[318px] mobile:h-[600px] mobile:bg-white mobile:mt-[40px]
+  tablet:w-[318px] tablet:h-[600px] tablet:bg-white tablet:mt-[85px]
+  ipad:w-[318px] ipad:h-[600px] ipad:bg-white ipad:mt-[85px]">
+    <div class="
+    mobile:w-[318px] mobile:h-[309px] 
+    tablet:w-[318px] tablet:h-[309px] 
+    ipad:w-[318px] ipad:h-[309px] ">
+  <img class="
+  mobile:h-[309px]
+  tablet:h-[309px]
+  ipad:h-[309px]"  src="./imag/main.image/ghaza.1.png" alt="">
+  </div>
+ <div class="
+ mobile:w-[318px] mobile:h-[292px]
+ tablet:w-[318px] tablet:h-[292px]
+ ipad:w-[318px] ipad:h-[292px]">
+  <div class="
+  mobile:w-[318px] mobile:h-[70px] mobile:flex
+  tablet:w-[318px] tablet:h-[70px] tablet:flex
+  ipad:w-[318px] ipad:h-[70px] ipad:flex">
+    <h1 class="
+    mobile:text-xl  mobile:text-[#ff0000] mobile:mt-[10%] mobile:ml-[56%] 
+    tablet:text-xl  tablet:text-[#ff0000] tablet:mt-[10%] tablet:ml-[56%] 
+    ipad:text-xl  ipad:text-[#ff0000] ipad:mt-[10%] ipad:ml-[56%] ">سوپ مکزیکی</h1>
+  </div>
+   <div class="
+   mobile:w-[273px] mobile:h-[85px] mobile:flex mobile:ml-[6%] mobile:mt-[9px]
+   tablet:w-[273px] tablet:h-[85px] tablet:flex ml-[6%] tablet:mt-[9px]
+   ipad:w-[273px] ipad:h-[85px] ipad:flex ipad:ml-[6%] ipad:mt-[9px]">
+    <p class="
+    mobile:text-[13px] mobile:text-right mobile:leading-[30px] mobile:tracking-[0.2px]
+    tablet:text-[13px] tablet:text-right tablet:leading-[30px] tablet:tracking-[0.2px]
+    ipad:text-[13px] ipad:text-right ipad:leading-[30px] ipad:tracking-[0.2px]">
+      گوشت بوقلمون را در یک ماهیتابه بزرگ ریخته، آب
+      روی آن بریزید ، تا روی آن را بپوشاند و به مدت نیم
+      ساعت آن را بپزید . گوشت را از مایع آن بیرون آورده</p>
+   </div>
+   <div class="
+   mobile:w-[318px] mobile:h-[130px] mobile:flex
+   tablet:w-[318px] tablet:h-[130px] tablet:flex
+   ipad:w-[318px] ipad:h-[130px] flex">
+     <div class="
+     mobile:w-[107px] mobile:h-[40px]  mobile:border-[#b4bfc7] mobile:rounded-[9px] mobile:border-[1px] mobile:flex mobile:hover:bg-[#ff0000] mobile:bg-white 
+     mobile:mt-[20%] mobile:ml-[59%]
+     tablet:w-[107px] tablet:h-[40px]  tablet:border-[#b4bfc7] tablet:rounded-[9px] tablet:border-[1px] tablet:flex tablet:hover:bg-[#ff0000] tablet:bg-white 
+     tablet:mt-[20%] tablet:ml-[59%]
+     ipad:w-[107px] ipad:h-[40px]  ipad:border-[#b4bfc7] ipad:rounded-[9px] ipad:border-[1px] ipad:flex ipad:hover:bg-[#ff0000] ipad:bg-white ipad:mt-[20%] ipad:ml-[59%]">
+     <a href="#" class="
+     mobile:font-extralight  mobile:text-center mobile:text-[#7d868b]  mobile:hover:text-white mobile:text-[14px] mobile:mt-[6%] mobile:ml-[18%]
+     tablet:font-extralight  tablet:text-center tablet:text-[#7d868b]  tablet:hover:text-white tablet:text-[14px] tablet:mt-[6%] tablet:ml-[18%]
+     ipad:font-extralight  ipad:text-center ipad:text-[#7d868b]  ipad:hover:text-white ipad:text-[14px] ipad:mt-[6%] ipad:ml-[18%]">ادامه مطلب</a>
+     </div>
+   </div>
+ </div></div>
+ </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+<div class="
+
+desktop:w-[100%] desktop:h-[770px] desktop:bg-[#cde4b0] desktop:mt-[45px] desktop:ml-auto desktop:mr-auto">
+  <div class="
+  desktop:w-[978px] desktop:h-[600px] desktop:flex desktop:flex-row desktop:justify-between desktop:ml-auto desktop:mr-auto 
+  mobile:hidden tablet:hidden ipad:hidden ">
+  <div class="
+  desktop:w-[318px] desktop:h-[600px] desktop:bg-white desktop:mt-[85px]">
+    <div class="
+    desktop:w-[318px] desktop:h-[309px]">
+      <img class="
+      desktop:h-[309px]"  src="./imag/main.image/ghaza.2.png" alt="">
+      </div>
+     <div class="
+     desktop:w-[318px] desktop:h-[292px]">
+      <div class="
+      desktop:w-[318px] desktop:h-[70px] desktop:flex">
+        <h1 class="
+        desktop:text-xl  desktop:text-[#ff0000] desktop:mt-[10%] desktop:ml-[70%] ">چیلا کیله</h1>
+      </div>
+       <div class="
+       desktop:w-[273px] desktop:h-[85px] desktop:flex desktop:ml-[6%] desktop:mt-[9px]">
+        <p class="
+        desktop:text-[13px] desktop:text-right desktop:mr-[px] desktop:leading-[30px] desktop:tracking-[0.3px]">
+          احتمالا نام چیلا کیله را نشنیده باشید ولی اگر یکبار
+           این غذای، فوق‌العاده خوشمزه را تهیه کنید و نوش
+          جان کنید جزئی جدانشدنی از فهرست</p>
+       </div>
+        <div class="
+ desktop:w-[318px] desktop:h-[130px] desktop:flex">
+   <div class="
+   desktop:w-[107px] desktop:h-[40px]  desktop:border-[#b4bfc7] desktop:rounded-[9px] desktop:border-[1px] desktop:flex desktop:hover:bg-[#ff0000] desktop:bg-white \
+   desktop:mt-[20%] desktop:ml-[59%]">
+   <a href="#" class="
+   desktop:font-extralight  desktop:text-center desktop:text-[#7d868b]  desktop:hover:text-white desktop:text-[14px] desktop:mt-[6%] desktop:ml-[18%]">ادامه مطلب</a>
+         </div>
+       </div>
+     </div>
+     </div>
+  <div class="
+  desktop:w-[318px] desktop:h-[600px] desktop:bg-white desktop:mt-[85px]">
+    <div class="
+    desktop:w-[318px] desktop:h-[309px] ">
+  <img class="
+  desktop:h-[309px]"  src="./imag/main.image/ghaza.1.png" alt="">
+  </div>
+ <div class="
+ desktop:w-[318px] desktop:h-[292px]">
+  <div class="
+  desktop:w-[318px] desktop:h-[70px] desktop:flex">
+    <h1 class="
+    desktop:text-xl  desktop:text-[#ff0000] desktop:mt-[10%] desktop:ml-[56%] ">سوپ مکزیکی</h1>
+  </div>
+   <div class="
+   desktop:w-[273px] desktop:h-[85px] desktop:flex desktop:ml-[6%] desktop:mt-[9px]">
+    <p class="
+    desktop:text-[13px] desktop:text-right desktop:leading-[30px] desktop:tracking-[0.2px]">
+      گوشت بوقلمون را در یک ماهیتابه بزرگ ریخته، آب
+      روی آن بریزید ، تا روی آن را بپوشاند و به مدت نیم
+      ساعت آن را بپزید . گوشت را از مایع آن بیرون آورده</p>
+   </div>
+   <div class="
+   desktop:w-[318px] desktop:h-[130px] desktop:flex">
+     <div class="
+     desktop:w-[107px] desktop:h-[40px]  desktop:border-[#b4bfc7] desktop:rounded-[9px] desktop:border-[1px] desktop:flex desktop:hover:bg-[#ff0000] desktop:bg-white \
+     desktop:mt-[20%] desktop:ml-[59%]">
+     <a href="#" class="
+     desktop:font-extralight  desktop:text-center desktop:text-[#7d868b]  desktop:hover:text-white desktop:text-[14px] desktop:mt-[6%] desktop:ml-[18%]">ادامه مطلب</a>
+     </div>
+   </div>
+ </div></div>
+
+  <div class="
+ 
+  desktop:w-[318px] desktop:h-[600px] desktop:bg-white desktop:mt-[85px]
+  ">
+    <div class="desktop:w-[318px] desktop:h-[309px]">
+  <img class="desktop:h-[309px]  "  src="./imag/main.image/ghaza.png" alt="">
+  </div>
+ <div class="desktop:w-[318px] desktop:h-[292px]">
+  <div class="desktop:w-[318px] desktop:h-[70px] desktop:flex">
+    <h1 class="desktop:text-xl desktop:text-[#ff0000] desktop:mt-[10%] desktop:ml-[39%] ">ماکارونی با سبزیجات</h1>
+  </div>
+   <div class="desktop:w-[273px] desktop:h-[85px] desktop:flex desktop:ml-[6%] desktop:mt-[9px]">
+    <p class="desktop:text-[13px] desktop:text-right desktop:mr-[px] desktop:leading-[30px] desktop:tracking-[0.1px] ">
+      ابتدا ماکارانی‌ها را در ظرفی‌ به‌ همراه‌ آب‌ روغن‌ مایع‌
+      و نمک‌ می‌ریزیم‌ تا کمی‌ بپزد . در این‌ حین‌ ؛ پیازها را
+      خرد کرده‌ و روی‌ روغن‌ ، تفت‌ می‌دهیم‌ تا طلایی‌ شود</p>
+     </div>
+   <div class="desktop:w-[318px] desktop:h-[130px] desktop:flex">
+     <div class="desktop:w-[107px] desktop:h-[40px]  desktop:border-[#b4bfc7] desktop:rounded-[9px] desktop:border-[1px] desktop:flex desktop:hover:bg-[#ff0000] 
+desktop:bg-white desktop:mt-[20%] desktop:ml-[59%]">
+     <a href="#" class="desktop:font-extralight  desktop:text-center desktop:text-[#7d868b]  desktop:hover:text-white desktop:text-[14px] desktop:mt-[6%] 
+     desktop:ml-[18%]">ادامه مطلب</a>
+     </div>
+   </div>
+ </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dark:bg-[#1c1c1c]
+desktop:hidden
+mobile:w-[100%] mobile:h-[1074px] mobile:bg-white
+tablet:w-[100%] tablet:h-[569px] tablet:bg-white
+ipad:w-[100%] ipad:h-[569px] ipad:bg-white">
+  <div class="
+  mobile:w-[320px] mobile:h-[600px] mobile:flex mobile:flex-row mobile:flex-wrap mobile:ml-auto mobile:mr-auto
+  tablet:w-[647px] tablet:h-[600px] tablet:flex tablet:flex-row tablet:justify-between tablet:ml-auto tablet:mr-auto
+  ipad:w-[647px] ipad:h-[600px] ipad:flex ipad:flex-row ipad:justify-between ipad:ml-auto ipad:mr-auto ">
+
+<div class="
+mobile:w-[318px] mobile:h-[458px] mobile:bg-white mobile:mt-[60px] mobile:shadow-[3px_3px_4px_1px] mobile:shadow-slate-200  mobile:border mobile:border-zinc-300
+tablet:w-[318px] tablet:h-[458px] tablet:bg-white tablet:mt-[60px] tablet:shadow-[3px_3px_4px_1px] tablet:shadow-slate-200  tablet:border tablet:border-zinc-300
+ipad:w-[318px] ipad:h-[458px] ipad:bg-white ipad:mt-[60px] 	ipad:shadow-[3px_3px_4px_1px] ipad:shadow-slate-200  ipad:border ipad:border-zinc-300">
+  <div class="
+  mobile:w-[318px] mobile:h-[180px] mobile:bg-zinc-600
+  tablet:w-[318px] tablet:h-[180px] tablet:bg-zinc-600
+  ipad:w-[318px] ipad:h-[180px] ipad:bg-zinc-600">
+    <video src="./movie/movie1.mp4" controls poster="./movie/poster1.png"></video>
+  </div>
+  <div class="
+  mobile:w-[318px] mobile:h-[268px]
+  tablet:w-[318px] tablet:h-[268px]
+  ipad:w-[318px] ipad:h-[268px]">
+    <div class="
+    mobile:w-[318px] mobile:h-[67px] mobile:flex
+    tablet:w-[318px] tablet:h-[67px] tablet:flex
+    ipad:w-[318px] ipad:h-[67px] ipad:flex">
+       <h1 class="
+       mobile:text-[17px] mobile:text-[#ff0000] mobile:mt-[7%] mobile:ml-[67%] mobile:font-bold
+       tablet:text-[17px] tablet:text-[#ff0000] tablet:mt-[7%] tablet:ml-[67%] tablet:font-bold
+       ipad:text-[17px] ipad:text-[#ff0000] ipad:mt-[7%] ipad:ml-[67%] ipad:font-bold">برنج گلستان</h1>
+    </div>
+    <div class="
+    mobile:w-[276px] mobile:h-[140px] mobile:ml-[6%]
+    tablet:w-[276px] tablet:h-[140px] tablet:ml-[6%]
+    ipad:w-[276px] ipad:h-[140px] ipad:ml-[6%]">
+      <p class="
+      mobile:text-right mobile:text-[14px] mobile:leading-[27px] mobile:tracking-[0.6px]
+      tablet:text-right tablet:text-[14px] tablet:leading-[27px] tablet:tracking-[0.6px]
+      ipad:text-right ipad:text-[14px] ipad:leading-[27px] ipad:tracking-[0.6px] ">عطر و طعم بی‌نظیر برنج گلستان با هیچ برنج
+         دیگری قابل مقایسه نیست. با گلستان،‌ كیفیت
+         زندگی بالاتر از همیشه است. چرا كه مشتریان
+          گلستان؛‌ لایق بهترین ها هستند</p>
+    </div>
+    <div class="
+    mobile:w-[318px] mobile:h-[61px]
+    tablet:w-[318px] tablet:h-[61px]
+    ipad:w-[318px] ipad:h-[61px]">
+       <div class="mobile:w-[160px] mobile:h-[40px] mobile:m-[10px] mobile:border-[#b4bfc7] mobile:rounded-[9px] mobile:border-[1px] mobile:ml-[43%]  mobile:flex 
+    mobile:hover:bg-[#ff0000] mobile:bg-white
+    tablet:w-[160px] tablet:h-[40px] tablet:m-[10px] tablet:border-[#b4bfc7] tablet:rounded-[9px] tablet:border-[1px] tablet:ml-[43%]  tablet:flex 
+    tablet:hover:bg-[#ff0000] tablet:bg-white
+    ipad:w-[160px] ipad:h-[40px] ipad:m-[10px] ipad:border-[#b4bfc7] ipad:rounded-[9px] ipad:border-[1px] ipad:ml-[43%] ipad:flex
+    ipad:hover:bg-[#ff0000] ipad:bg-white ">
+   <a href="#" class="
+   mobile:font-extralight mobile:ml-[24px] mobile:text-center mobile:text-[#7d868b] mobile:mt-[5px] mobile:hover:text-white mobile:text-[17px]
+   tablet:font-extralight tablet:ml-[24px] tablet:text-center tablet:text-[#7d868b] tablet:mt-[5px] tablet:hover:text-white tablet:text-[17px]
+   ipad:font-extralight ipad:ml-[24px] ipad:text-center ipad:text-[#7d868b] ipad:mt-[5px] ipad:hover:text-white ipad:text-[17px] ">مشاهده محصولات</a>
+    </div>
+    </div>
+  </div>
+  </div>
+  <div class="
+  mobile:w-[318px] mobile:h-[458px] mobile:bg-white mt-[60px] mobile:shadow-[3px_3px_4px_1px] mobile:shadow-slate-200 mobile:border mobile:border-zinc-300
+  ipad:w-[318px] ipad:h-[458px] ipad:bg-white ipad:mt-[60px] ipad:shadow-[3px_3px_4px_1px] ipad:shadow-slate-200 ipad:border ipad:border-zinc-300
+  tablet:w-[318px] tablet:h-[458px] tablet:bg-white tablet:mt-[60px] tablet:shadow-[3px_3px_4px_1px] tablet:shadow-slate-200 tablet:border tablet:border-zinc-300">
+  <div class="
+  mobile:w-[318px] mobile:h-[180px] mobile:bg-zinc-600
+  tablet:w-[318px] tablet:h-[180px] tablet:bg-zinc-600
+  ipad:w-[318px] ipad:h-[180px] ipad:bg-zinc-600
+  ">
+    <video src="./movie/movie2.mp4" controls></video>
+  </div>
+  <div class="
+  mobile:w-[318px] mobile:h-[268px] 
+  tablet:w-[318px] tablet:h-[268px] 
+  ipad:w-[318px] ipad:h-[268px] ">
+     <div class="
+     mobile:w-[318px] mobile:h-[67px] mobile:flex
+     tablet:w-[318px] tablet:h-[67px] tablet:flex
+     ipad:w-[318px] ipad:h-[67px] ipad:flex">
+    <h1 class="
+    mobile:text-[17px] mobile:text-[#ff0000] mobile:mt-[7%] mobile:ml-[44%] mobile:font-bold
+    tablet:text-[17px] tablet:text-[#ff0000] tablet:mt-[7%] tablet:ml-[44%] tablet:font-bold
+    ipad:text-[17px] ipad:text-[#ff0000] ipad:mt-[7%] ipad:ml-[44%] ipad:font-bold">اینستاگرام هاتی نودلی</h1>
+ </div>
+ <div class="
+ mobile:w-[276px] mobile:h-[140px] mobile:ml-[6%]
+ tablet:w-[276px] tablet:h-[140px] tablet:ml-[6%]
+ ipad:w-[276px] ipad:h-[140px] ipad:ml-[6%]">
+   <p class="
+   mobile:text-right mobile:text-[13px] mobile:leading-[27px] mobile:tracking-[0.2px]
+   tablet:text-right tablet:text-[13px] tablet:leading-[27px] tablet:tracking-[0.2px]
+   ipad:text-right ipad:text-[13px] ipad:leading-[27px] ipad:tracking-[0.2px] ">
+    نودل‌های هاتی كارا را می‌توان جایگزین سالمی برای
+    غذاهای فست‌ فودی دانست. طعم های عالی،‌ ارزش
+    غذایی بالا و قیمتهای مناسب از این محصول ، غذای
+    سالم و كاملی ساخته است
+   </p>
+ </div>
+ <div class="
+ mobile:w-[318px] mobile:h-[61px]
+ tablet:w-[318px] tablet:h-[61px]
+ ipad:w-[318px] ipad:h-[61px]">
+    <div class="
+    mobile:w-[120px] mobile:h-[40px] mobile:m-[10px] mobile:border-[#b4bfc7] mobile:rounded-[9px] mobile:border-[1px] mobile:ml-[55%]  mobile:flex 
+    mobile:hover:bg-[#ff0000] mobile:bg-white
+    tablet:w-[120px] tablet:h-[40px] tablet:m-[10px] tablet:border-[#b4bfc7] tablet:rounded-[9px] tablet:border-[1px] tablet:ml-[55%] tablet:flex 
+    tablet:hover:bg-[#ff0000] tablet:bg-white
+    ipad:w-[120px] ipad:h-[40px] ipad:m-[10px] ipad:border-[#b4bfc7] ipad:rounded-[9px] ipad:border-[1px] ipad:ml-[55%] ipad:flex 
+  ipad:hover:bg-[#ff0000] ipad:bg-white">
+<a href="#" class="
+mobile:font-extralight mobile:ml-[24px] mobile:text-center mobile:text-[#7d868b] mobile:mt-[5px] mobile:hover:text-white mobile:text-[17px]
+tablet:font-extralight tablet:ml-[24px] tablet:text-center tablet:text-[#7d868b] tablet:mt-[5px] tablet:hover:text-white tablet:text-[17px]
+ipad:font-extralight ipad:ml-[24px] ipad:text-center ipad:text-[#7d868b] ipad:mt-[5px] ipad:hover:text-white ipad:text-[17px] ">ادامه مطلب</a>
+ </div>
+ </div>
+  </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<div class="dark:bg-[#1c1c1c]
+desktop:w-[100%] desktop:h-[569px] desktop:bg-white">
+  <div class="desktop:w-[978px] desktop:h-[600px] desktop:flex desktop:flex-row desktop:justify-between desktop:ml-auto desktop:mr-auto mobile:hidden tablet:hidden ipad:hidden">
+
+<div class="desktop:w-[318px] desktop:h-[458px] desktop:bg-white desktop:mt-[60px] 	desktop:shadow-[3px_3px_4px_1px] desktop:shadow-slate-200  desktop:border 
+desktop:border-zinc-300">
+  <div class="desktop:w-[318px] desktop:h-[180px] desktop:bg-zinc-600">
+    <video src="./movie/movie1.mp4" controls poster="./movie/poster1.png"></video>
+  </div>
+  <div class="desktop:w-[318px] desktop:h-[268px]">
+    <div class="desktop:w-[318px] desktop:h-[67px] desktop:flex">
+       <h1 class="desktop:text-[17px] desktop:text-[#ff0000] desktop:mt-[7%] desktop:ml-[67%] desktop:font-bold">برنج گلستان</h1>
+    </div>
+    <div class="desktop:w-[276px] desktop:h-[140px] desktop:ml-[6%]">
+      <p class="desktop:text-right desktop:text-[14px] desktop:leading-[27px] desktop:tracking-[0.6px] ">عطر و طعم بی‌نظیر برنج گلستان با هیچ برنج
+         دیگری قابل مقایسه نیست. با گلستان،‌ كیفیت
+         زندگی بالاتر از همیشه است. چرا كه مشتریان
+          گلستان؛‌ لایق بهترین ها هستند</p>
+    </div>
+    <div class="desktop:w-[318px] desktop:h-[61px]">
+       <div class="desktop:w-[160px] desktop:h-[40px] desktop:m-[10px] desktop:border-[#b4bfc7] desktop:rounded-[9px] desktop:border-[1px] desktop:ml-[43%]  desktop:flex 
+    desktop:hover:bg-[#ff0000] desktop:bg-white">
+   <a href="#" class="desktop:font-extralight desktop:ml-[24px] desktop:text-center desktop:text-[#7d868b] desktop:mt-[5px] desktop:hover:text-white 
+   text-[17px] ">مشاهده محصولات</a>
+    </div>
+    </div>
+  </div>
+  </div>
+  <div class="desktop:w-[318px] desktop:h-[458px] desktop:bg-white mt-[60px] desktop:shadow-[3px_3px_4px_1px] desktop:shadow-slate-200 desktop:border 
+desktop:border-zinc-300">
+  <div class="desktop:w-[318px] desktop:h-[180px] desktop:bg-zinc-600">
+    <video src="./movie/movie2.mp4" controls></video>
+  </div>
+  <div class="desktop:w-[318px] desktop:h-[268px] ">
+     <div class="desktop:w-[318px] desktop:h-[67px] desktop:flex">
+    <h1 class="desktop:text-[17px] desktop:text-[#ff0000] desktop:mt-[7%] desktop:ml-[44%] desktop:font-bold">اینستاگرام هاتی نودلی</h1>
+ </div>
+ <div class="desktop:w-[276px] desktop:h-[140px] desktop:ml-[6%]">
+   <p class="desktop:text-right desktop:text-[13px] desktop:leading-[27px] desktop:tracking-[0.2px] ">
+    نودل‌های هاتی كارا را می‌توان جایگزین سالمی برای
+    غذاهای فست‌ فودی دانست. طعم های عالی،‌ ارزش
+    غذایی بالا و قیمتهای مناسب از این محصول ، غذای
+    سالم و كاملی ساخته است
+   </p>
+ </div>
+ <div class="desktop:w-[318px] desktop:h-[61px]">
+    <div class="desktop:w-[120px] desktop:h-[40px] desktop:m-[10px] desktop:border-[#b4bfc7] desktop:rounded-[9px] desktop:border-[1px] desktop:ml-[55%] desktop:flex 
+ desktop:hover:bg-[#ff0000] desktop:bg-white">
+<a href="#" class="desktop:font-extralight desktop:ml-[24px] desktop:text-center desktop:text-[#7d868b] desktop:mt-[5px] desktop:hover:text-white 
+desktop:text-[17px] ">ادامه مطلب</a>
+ </div>
+ </div>
+  </div>
+  </div>
+  <div class="desktop:w-[318px] desktop:h-[458px] desktop:bg-white desktop:mt-[60px] 	desktop:shadow-[3px_3px_4px_1px] desktop:shadow-slate-200  desktop:border 
+desktop:border-zinc-300">
+  <div class="desktop:w-[318px] desktop:h-[180px] desktop:bg-[#b5a392] ">
+   <video class="desktop:w-[318px] desktop:h-[180px]" src="./movie/movie3.mp4"  controls poster="./movie/poster3.png "></video>
+  </div>
+  <div class="desktop:w-[318px] desktop:h-[268px]">
+     <div class="desktop:w-[318px] desktop:h-[67px] desktop:flex">
+    <h1 class="desktop:text-[17px] desktop:text-[#ff0000] desktop:mt-[7%] desktop:ml-[69%] desktop:font-bold">سالاد نودل</h1>
+ </div>
+ <div class="desktop:w-[276px] desktop:h-[140px] desktop:ml-[6%]">
+   <p class="desktop:text-right desktop:text-[14px] desktop:leading-[27px] desktop:tracking-[0.6px] ">
+    نودل هاتی کارا یك میان‌وعده‌ی مغذی، در هر
+    موقعیتی كه باشید ؛ با كمی ، آب جوش و یك نودل
+    هاتی‌كارا می‌توانید از یك غذای سالم و خوشمزه لذت
+    ببرید
+   </p>
+ </div>
+ <div class="desktop:w-[318px] desktop:h-[61px]">
+    <div class="desktop:w-[120px] desktop:h-[40px] dsktop:m-[10px] desktop:border-[#b4bfc7] desktop:rounded-[9px] desktop:border-[1px] desktop:ml-[55%]  desktop:flex 
+   desktop:hover:bg-[#ff0000] desktop:bg-white">
+     <a href="#" class="desktop:font-extralight desktop:ml-[24px] desktop:text-center desktop:text-[#7d868b] desktop:mt-[5px] desktop:hover:text-white 
+     desktop:text-[17px] ">ادامه مطلب</a>
+    </div>
+ </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="
+mobile:w-[100%] mobile:h-[300px] mobile:bg-[#105153] mobile:bg-cover mobile:border-b-[1px] mobile:border-[#009d90] mobile:flex
+tablet:w-[100%] tablet:h-[300px] tablet:bg-[#105153] tablet:bg-cover tablet:border-b-[1px] tablet:border-[#009d90] tablet:flex
+ipad:w-[100%] ipad:h-[300px] ipad:bg-[#105153] ipad:bg-cover ipad:border-b-[1px] ipad:border-[#009d90] ipad:flex
+desktop:w-[100%] desktop:h-[300px] desktop:bg-[#105153] desktop:bg-cover desktop:border-b-[1px] desktop:border-[#009d90] desktop:flex">
+  <div class="
+  mobile:w-[265px] mobile:h-[50px] mobile:mt-[249px] mobile:ml-auto mobile:mr-auto
+  tablet:w-[265px] tablet:h-[50px] mt-[249px] tablet:ml-auto tablet:mr-auto
+  ipad:w-[265px] ipad:h-[50px] ipad:mt-[249px] ipad:ml-auto ipad:mr-auto
+  desktop:w-[265px] desktop:h-[50px] desktop:mt-[249px] desktop:ml-auto desktop:mr-auto">
+    <h1 class=" 
+    mobile:text-[#d5e7d6] mobile:text-[17px] mobile:tracking-[0.1px] mobile:mt-[12px]
+    tablet:text-[#d5e7d6] tablet:text-[17px] tablet:tracking-[0.1px] tablet:mt-[12px]
+    ipad:text-[#d5e7d6] ipad:text-[17px] ipad:tracking-[0.1px] ipad:mt-[12px]
+    desktop:text-[#d5e7d6] desktop:text-[17px] desktop:tracking-[0.1px] desktop:mt-[12px]">مسئوليت‌های اجتماعی شركت گلستان</h1>
+  </div>
+</div>
+<div class="
+mobile:w-[100%] mobile:h-[300px] mobile:bg-[#105153] mobile:bg-cover mobile:border-b-[20px] mobile:border-[#e9d69f] mobile:flex
+tablet:w-[100%] tablet:h-[300px] tablet:bg-[#105153] tablet:bg-cover tablet:border-b-[20px] tablet:border-[#e9d69f] tablet:flex
+ipad:w-[100%] ipad:h-[300px] ipad:bg-[#105153] ipad:bg-cover ipad:border-b-[20px] ipad:border-[#e9d69f] ipad:flex
+desktop:w-[100%] desktop:h-[300px] desktop:bg-[#105153] desktop:bg-cover desktop:border-b-[20px] desktop:border-[#e9d69f] desktop:flex">
+ <div class="
+ mobile:w-[340px] mobile:h-[80px] mobile:ml-auto mobile:mr-auto
+ tablet:w-[340px] tablet:h-[80px] tablet:ml-auto tablet:mr-auto
+ ipad:w-[340px] ipad:h-[80px] ipad:ml-auto ipad:mr-auto
+ desktop:w-[340px] desktop:h-[80px] desktop:ml-auto desktop:mr-auto">
+  <div class="
+  mobile:w-[100%] mobile:h-[45px] mobile:flex
+  tablet:w-[100%] tablet:h-[45px] tablet:flex
+  ipad:w-[100%] ipad:h-[45px] ipad:flex
+  desktop:w-[100%] desktop:h-[45px] desktop:flex">
+    <h1 class="
+    mobile:text-[33px] mobile:text-[#009d90] mobile:mt-[1%]
+    tablet:text-[33px] tablet:text-[#009d90] tablet:mt-[1%]
+    ipad:text-[33px] ipad:text-[#009d90] ipad:mt-[1%]
+    desktop:text-[33px] desktop:text-[#009d90] desktop:mt-[1%]">Golestan</h1>
+    <h1 class="
+    mobile:text-[22px] mobile:text-[#04d3da] mobile:mt-[5%] mobile:ml-[5px]
+    tablet:text-[22px] tablet:text-[#04d3da] tablet:mt-[5%] tablet:ml-[5px]
+    ipad:text-[22px] ipad:text-[#04d3da] ipad:mt-[5%] ipad:ml-[5px]
+    desktop:text-[22px] desktop:text-[#04d3da] desktop:mt-[5%] desktop:ml-[5px]">Social Responsibility</h1>
+  </div>
+  <div class="
+  mobile:w-[100%] mobile:h-[35px]
+  tablet:w-[100%] tablet:h-[35px]
+  ipad:w-[100%] ipad:h-[35px]
+  desktop:w-[100%] desktop:h-[35px]">
+    <h1 class="
+    mobile:text-[#b1b7bc] mobile:ml-[30%] mobile:mt-[2%] mobile:text-[20px]
+    tablet:text-[#b1b7bc] tablet:ml-[30%] tablet:mt-[2%] tablet:text-[20px]
+    ipad:text-[#b1b7bc] ipad:ml-[30%] ipad:mt-[2%] ipad:text-[20px]
+    desktop:text-[#b1b7bc] desktop:ml-[30%] desktop:mt-[2%] desktop:text-[20px]">Mahdi Hospital</h1>
+  </div>
+  <div class="
+  mobile:w-[395px] mobile:h-[342px] mobile:ml-[-36px]
+  tablet:w-[395px] tablet:h-[342px] tablet:ml-[-36px]
+  ipad:w-[395px] ipad:h-[342px] ipad:ml-[-36px]
+  desktop:w-[395px] desktop:h-[342px] desktop:ml-[-36px]">
+    <img src="./imag/main.image/epartman.png" alt="">
+  </div>
+   </div>
+    </div>
+     
+
+
+
+
+
+
+   <div class="
+ mobile:w-[90%] mobile:h-[270px] mobile:mt-[163px] mobile:ml-auto mobile:mr-auto
+ tablet:w-[100%] tablet:h-[270px] tablet:mt-[163px] tablet:ml-auto tablet:mr-auto
+ ipad:w-[100%] ipad:h-[270px] ipad:mt-[163px] ipad:ml-auto ipad:mr-auto
+ desktop:w-[100%] desktop:h-[270px] desktop:mt-[163px] desktop:ml-auto desktop:mr-auto">
+
+
+
+   <div class="
+ mobile:w-[90%] mobile:h-[270px] mobile:mt-[54px] mobile:ml-auto mobile:mr-auto
+ tablet:w-[700px] tablet:h-[270px] tablet:mt-[54px] tablet:ml-auto tablet:mr-auto
+ ipad:w-[700px] ipad:h-[270px] ipad:mt-[54px] ipad:ml-auto ipad:mr-auto
+ desktop:w-[700px] desktop:h-[270px] desktop:mt-[54px] desktop:ml-auto desktop:mr-auto">
+   <div class="
+   mobile:w-[100%] mobile:h-[50px] mobile:ml-auto mobile:mr-auto
+   tablet:w-[100%] tablet:h-[50px] tablet:ml-auto tablet:mr-auto
+   ipad:w-[100%] ipad:h-[50px] ipad:ml-auto ipad:mr-auto
+   desktop:w-[100%] desktop:h-[50px] desktop:ml-auto desktop:mr-auto">
+     <h1 class="
+     mobile:text-[19px] mobile:text-[#ff0000] mobile:text-right mobile:font-bold mobile:tracking-[0.6px]
+     tablet:text-[19px] tablet:text-[#ff0000] tablet:text-right tablet:font-bold tablet:tracking-[0.6px]
+     ipad:text-[19px] ipad:text-[#ff0000] ipad:text-right ipad:font-bold ipad:tracking-[0.6px]
+     desktop:text-[19px] desktop:text-[#ff0000] desktop:text-right desktop:font-bold desktop:tracking-[0.6px]">مسئوليت‌های اجتماعی گلستان</h1>
+   </div>
+   <div class="
+   mobile:w-[100%] mobile:h-auto mobile:text-right mobile:leading-[33px] mobile:tracking-[0.1px] mobile:text-[16px] mobile:text-[#7d868b] mobile:ml-auto mobile:mr-auto
+   tablet:w-[100%] tablet:h-[133px] tablet:text-right tablet:leading-[33px] tablet:tracking-[0.1px] tablet:text-[16px] tablet:text-[#7d868b] tablet:ml-auto tablet:mr-auto
+   ipad:w-[100%] ipad:h-[133px] ipad:text-right ipad:leading-[33px] ipad:tracking-[0.1px] ipad:text-[16px] ipad:text-[#7d868b] ipad:ml-auto ipad:mr-auto
+   desktop:w-[100%] desktop:h-[133px] desktop:text-right desktop:leading-[33px] desktop:tracking-[0.1px] desktop:text-[16px] desktop:text-[#7d868b] desktop:ml-auto 
+desktop:mr-auto">
+     <p>كسب‌وكارها اجزای قدرتمند جامعه به شمار می‌آیند و موفق‌ترین، قابل‌احترام‌ترین و مطلوب‌ترین كسب‌وكارها
+       آنهایی هستند كه كاری فراتر از درآمدزایی ایجاد كنند ؛‌ آنهایی كه آمده‌اند ، تا از تجربه و امکانات شان برای حل
+       مشكلات جامعه و محیط زندگی خود استفاده كنند. گلستان در فعالیت‌های‌ اجتماعی خود،‌ گسترده وسیعی از
+       فعالیت‌های عام‌المنفعه را در دستوركار خود قرار داده است</p>
+    </div>
+    <div class="
+    mobile:w-[100%] mobile:h-[50px] mobile:ml-auto mobile:mr-auto
+    tablet:w-[100%] tablet:h-[50px] tablet:ml-auto tablet:mr-auto
+    ipad:w-[100%] ipad:h-[50px] ipad:ml-auto ipad:mr-auto
+    desktop:w-[100%] desktop:h-[50px] desktop:ml-auto desktop:mr-auto">
+     <div class="
+     mobile:w-[128px] mobile:h-[41px] mobile:m-[10px] mobile:border-[#b4bfc7] mobile:rounded-[9px] mobile:border-[1px]  mobile:mt-[30px] mobile:flex mobile:hover:bg-
+[#ff0000] mobile:bg-white mobile:ml-auto mobile:hover:bg-[#ff0000]
+     tablet:w-[128px] tablet:h-[41px] tablet:m-[10px] tablet:border-[#b4bfc7] tablet:rounded-[9px] tablet:border-[1px]  tablet:mt-[60px] tablet:flex tablet:hover:bg-
+[#ff0000] tablet:bg-white tablet:ml-auto tablet:hover:bg-[#ff0000]
+     ipad:w-[128px] ipad:h-[41px] ipad:m-[10px] ipad:border-[#b4bfc7] ipad:rounded-[9px] ipad:border-[1px]   ipad:mt-[60px] ipad:flex 
+     ipad:hover:bg-[#ff0000] ipad:bg-white ipad:ml-auto
+     desktop:w-[128px] desktop:h-[41px] desktop:m-[10px] desktop:border-[#b4bfc7] desktop:rounded-[9px] desktop:border-[1px]  desktop:mt-[60px] desktop:flex 
+desktop:hover:bg-[#ff0000] desktop:bg-white desktop:ml-auto">
+    <a href="#" class="
+    mobile:font-extralight mobile:ml-[18px] mobile:text-center mobile:text-[#7d868b] mobile:mt-[5px] mobile:hover:text-white
+    tablet:font-extralight tablet:ml-[18px] tablet:text-center tablet:text-[#7d868b] tablet:mt-[5px] tablet:hover:text-white
+    ipad:font-extralight ipad:ml-[18px] ipad:text-center ipad:text-[#7d868b] ipad:mt-[5px] ipad:hover:text-white
+    desktop:font-extralight desktop:ml-[18px] desktop:text-center desktop:text-[#7d868b] desktop:mt-[5px] desktop:hover:text-white">اطلاعات بیشتر</a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+   </div>
+
+
+
+
+ <!--end-->
+
+
+  <!--start footer-->
+    <div class="
+  mobile:w-[100%] mobile:h-[93px] mobile:mt-[100px] mobile:bg-[#eeefef] mobile:flex 
+  tablet:w-[100%] tablet:h-[93px] tablet:mt-[100px] tablet:bg-[#eeefef] tablet:flex 
+  ipad:w-[100%] ipad:h-[93px] ipad:mt-[100px] ipad:bg-[#eeefef] ipad:flex 
+  desktop:w-[100%] desktop:h-[93px] desktop:mt-[100px] desktop:bg-[#eeefef] desktop:flex ">
+  <div class="
+  mobile:w-[326px] mobile:bg-[#eeefef] mobile:h-[93px] 
+  tablet:w-[662px] tablet:bg-[#eeefef] tablet:h-[93px] 
+  ipad:w-[662px] ipad:bg-[#eeefef] ipad:h-[93px]
+  desktop:w-[662px] desktop:bg-[#eeefef] desktop:h-[93px] desktop:justify-center"></div>
+  <div class="
+  mobile:w-[660px] mobile:bg-[#eeefef] mobile:h-[93px] mobile:flex mobile:flex-row mobile:space-x-[9px] mobile:justify-center
+  tablet:w-[660px] tablet:bg-[#eeefef] tablet:h-[93px] tablet:flex tablet:flex-row tablet:space-x-[9px] 
+   ipad:w-[660px] ipad:bg-[#eeefef] ipad:h-[93px] ipad:flex ipad:flex-row ipad:flex-wrap ipad:space-x-[9px]
+  desktop:w-[660px] desktop:bg-[#eeefef] desktop:h-[93px] desktop:flex desktop:flex-row desktop:flex-wrap  desktop:space-x-[9px] desktop:justify-center ">
+    <div class="w-[50px] h-[50px] bg-[#b8b8b8] rounded-full mt-[21px] hover:bg-[#ed3d77]">
+      <img class="" src="./imag/png/aparat.png" alt="">
+    </div>
+    <div class="w-[50px] h-[50px] bg-[#b8b8b8] rounded-full mt-[21px] hover:bg-[#2da6db]">
+      <img class="" src="./imag/png/telegram.png" alt="">
+    </div>
+    <div class="w-[50px] h-[50px] bg-[#b8b8b8] rounded-full mt-[21px] hover:bg-[#be2d2d]">
+      <img class="w-[47px] ml-[2px]" src="./imag/png/instagram...png" alt="">
+    </div>
+    <div class="w-[50px] h-[50px] bg-[#b8b8b8] rounded-full mt-[21px] hover:bg-[#4ca7d5]">
+      <img class="w-[36px] ml-[7px] mt-1" src="./imag/png/in.png" alt="">
+    </div>
+    <div class="w-[50px] h-[50px] bg-[#b8b8b8] rounded-full mt-[21px] hover:bg-[#7c95c9]">
+    <img class="mt-[-6px] mr-[3px]" src="./imag/png/icons8-facebook-logo-2048.png" alt=""></div>
+  </div>
+  <div class="w-[662px] bg-[#eeefef] h-[93px]"></div>
+ </div>
+<div class="
+mobile:w-[100%] mobile:h-[24px] mobile:bg-[#ed1c24]
+tablet:w-[100%] tablet:h-[24px] tablet:bg-[#ed1c24]
+ipad:w-[100%] ipad:h-[24px] ipad:bg-[#ed1c24]
+desktop:w-[100%] desktop:h-[24px] desktop:bg-[#ed1c24]"></div>
+ <div class="
+ mobile:w-[100%] mobile:h-[1424px]  mobile:bg-[#262626] mobile:flex mobile:flex-row mobile:flex-wrap mobile:justify-center
+ tablet:w-[100%] tablet:h-[486px] tablet:bg-[#262626] tablet:flex tablet:flex-row tablet:flex-wrap tablet:justify-center
+ ipad:w-[100%] ipad:h-[486px] ipad:bg-[#262626] ipad:flex ipad:flex-row ipad:flex-wrap ipad:justify-center
+ desktop:w-[100%] desktop:h-[486px] desktop:bg-[#262626] desktop:flex desktop:flex-row desktop:flex-wrap desktop:justify-center">
+   <div class="
+   mobile:w-[96%] mobile:h-[100%] mobile:flex mobile:flex-row mobile:flex-wrap 
+    tablet:w-[660px] tablet:h-[324px] tablet:flex tablet:flex-row tablet:flex-wrap  tablet:mt-[12px] tablet:space-x-[20px]
+   ipad:w-[660px] ipad:h-[324px] ipad:flex ipad:flex-row ipad:flex-wrap  ipad:mt-[12px] ipad:space-x-[20px]
+   desktop:w-[660px] desktop:h-[324px] desktop:flex desktop:flex-row desktop:flex-wrap  desktop:mt-[12px] desktop:space-x-[20px] ">
+     <div class="
+     mobile:w-[96%] mobile:h-[356px]
+     tablet:w-[150px] tablet:h-[100%]
+     ipad:w-[150px] ipad:h-[100%]
+     desktop:w-[150px] desktop:h-[100%]">
+       <div class="
+       mobile:w-[100%] mobile:h-[113px] mobile:border-b mobile:border-[#828991] 
+       tablet:w-[100%] tablet:h-[113px] tablet:border-b tablet:border-[#828991]
+       ipad:w-[100%] ipad:h-[113px] ipad:border-b ipad:border-[#828991]
+       desktop:w-[100%] desktop:h-[113px] desktop:border-b desktop:border-[#828991] ">
+         <img class="
+         mobile:ml-auto mobile:mr-auto
+         tablet:ml-[12%] 
+         ipad:ml-[12%]
+         desktop:ml-[12%] " src="./imag/png/ghablame.png" alt="">
+       </div>
+       <div class="
+       mobile:w-[100%] mobile:h-[47px] mobile:border-b mobile:border-[#828991] 
+       tablet:w-[100%] tablet:h-[47px] tablet:flex tablet:border-b tablet:border-[#828991]
+       ipad:w-[100%] ipad:h-[47px] ipad:flex ipad:border-b ipad:border-[#828991]
+       desktop:w-[100%] desktop:h-[47px] desktop:flex desktop:border-b desktop:border-[#828991]">
+         <h1 class="
+         mobile:text-white mobile:text-center mobile:mt-[10px]
+         tablet:text-white tablet:ml-[26px] tablet:mt-[10px]
+        ipad:text-white ipad:ml-[26px] ipad:mt-[10px]
+         desktop:text-white desktop:ml-[26px] desktop:mt-[10px]">حبوبات گلستان</h1>
+       </div>
+       <div class="
+       mobile:w-[100%] mobile:h-[196px] 
+       tablet:w-[100%] tablet:h-[164px] tablet:flex tablet:flex-row tablet:flex-wrap
+       ipad:w-[100%] ipad:h-[164px] ipad:flex ipad:flex-row ipad:flex-wrap
+       desktop:w-[100%] desktop:h-[164px] desktop:flex desktop:flex-row desktop:flex-wrap">
+       <h2 class="
+       mobile:text-[12px] mobile:text-[#adb4b1] mobile:text-center mobile:hover:text-white mobile:mt-[33px]
+       tablet:text-[13px] tablet:text-[#adb4b1] tablet:ml-[67px] tablet:hover:text-white tablet:mt-[33px]
+       ipad:text-[13px] ipad:text-[#adb4b1] ipad:ml-[67px] ipad:hover:text-white ipad:mt-[33px]
+       desktop:text-[13px] desktop:text-[#adb4b1] desktop:ml-[67px] desktop:hover:text-white desktop:mt-[33px]">لوبیا قرمز ممتاز</h2>
+       <h2 class="
+       mobile:text-[12px] mobile:text-[#adb4b1] mobile:text-center mobile:hover:text-white mobile:mt-[9px]
+       tablet:text-[13px] tablet:text-[#adb4b1] tablet:ml-[54px] tablet:hover:text-white
+       ipad:text-[13px] ipad:text-[#adb4b1] ipad:ml-[54px] ipad:hover:text-white
+       desktop:text-[13px] desktop:text-[#adb4b1] desktop:ml-[54px] desktop:hover:text-white">لوبیا چیتی گلستان</h2>
+       <h2 class="
+       mobile:text-[12px] mobile:text-[#adb4b1] mobile:text-center mobile:hover:text-white mobile:mt-[9px]
+       tablet:text-[13px] tablet:text-[#adb4b1] tablet:ml-[73px] tablet:hover:text-white
+       ipad:text-[13px] ipad:text-[#adb4b1] ipad:ml-[73px] ipad:hover:text-white
+       desktop:text-[13px] desktop:text-[#adb4b1] desktop:ml-[73px] desktop:hover:text-white">عدس کانادایی</h2>
+       <h2 class="
+       mobile:text-[12px] mobile:text-[#adb4b1] mobile:text-center mobile:hover:text-white mobile:mt-[9px]
+       tablet:text-[13px] tablet:text-[#adb4b1] tablet:ml-[42px] tablet:hover:text-white
+       ipad:text-[13px] ipad:text-[#adb4b1] ipad:ml-[42px] ipad:hover:text-white
+       desktop:text-[13px] desktop:text-[#adb4b1] desktop:ml-[42px] desktop:hover:text-white">نخود زودپز کرمانشاه</h2>
+       <h2 class="
+       mobile:text-[12px] mobile:text-[#adb4b1] mobile:text-center mobile:hover:text-white mobile:mt-[9px]
+       tablet:text-[13px] tablet:text-[#adb4b1] tablet:ml-[53px] tablet:hover:text-white
+       ipad:text-[13px] ipad:text-[#adb4b1] ipad:ml-[53px] ipad:hover:text-white
+       desktop:text-[13px] desktop:text-[#adb4b1] desktop:ml-[53px] desktop:hover:text-white">لوبیا سفید گلستان</h2>
+       </div>
+     </div>
+     <div class="
+     mobile:w-[96%] mobile:h-[356px]
+     tablet:w-[150px] tablet:h-[100%]
+     ipad:w-[150px] ipad:h-[100%]
+     desktop:w-[150px] desktop:h-[100%]">
+        <div class="
+        mobile:w-[100%] mobile:h-[113px] mobile:border-b mobile:border-[#828991] 
+        tablet:w-[100%] tablet:h-[113px] tablet:border-b tablet:border-[#828991]
+        ipad:w-[100%] ipad:h-[113px] ipad:border-b ipad:border-[#828991]
+        desktop:w-[100%] desktop:h-[113px] desktop:border-b desktop:border-[#828991]">
+        <img class="
+        mobile:ml-auto mobile:mr-auto
+        tablet:ml-[12%] 
+        ipad:ml-[12%] 
+        desktop:ml-[12%]" src="./imag/png/besab.png" alt="">
+      </div>
+      <div class="
+      mobile:w-[100%] mobile:h-[47px] mobile:border-b mobile:border-[#828991] 
+      tablet:w-[100%] tablet:h-[47px] tablet:flex tablet:border-b tablet:border-[#828991]
+      ipad:w-[100%] ipad:h-[47px] ipad:flex ipad:border-b ipad:border-[#828991]
+      desktop:w-[100%] desktop:h-[47px] desktop:flex desktop:border-b desktop:border-[#828991]">
+        <h1 class="
+        mobile:text-white mobile:text-center mobile:mt-[10px]
+        tablet:text-white tablet:ml-[33px] tablet:mt-[10px]
+        ipad:text-white ipad:ml-[33px] ipad:mt-[10px]
+        desktop:text-white desktop:ml-[33px] desktop:mt-[10px]">ادویه گلستان</h1>
+      </div>
+      <div class="
+      mobile:w-[100%] mobile:h-[196px] 
+      tablet:w-[100%] tablet:h-[164px] tablet:flex tablet:flex-row tablet:flex-wrap
+      ipad:w-[100%] ipad:h-[164px] ipad:flex ipad:flex-row ipad:flex-wrap
+      desktop:w-[100%] desktop:h-[164px] desktop:flex desktop:flex-row desktop:flex-wrap">
+      <h2 class="
+      mobile:text-[12px] mobile:text-[#adb4b1] mobile:text-center mobile:hover:text-white mobile:mt-[33px]
+      tablet:text-[13px] tablet:text-[#adb4b1] tablet:ml-[40px] tablet:hover:text-white tablet:mt-[33px]
+      ipad:text-[13px] ipad:text-[#adb4b1] ipad:ml-[40px] ipad:hover:text-white ipad:mt-[33px]
+      desktop:text-[13px] desktop:text-[#adb4b1] desktop:ml-[40px] desktop:hover:text-white desktop:mt-[33px]">زعفران ممتاز خراسان</h2>
+      <h2 class="
+      mobile:text-[12px] mobile:text-[#adb4b1] mobile:text-center mobile:hover:text-white mobile:mt-[9px]
+      tablet:text-[13px] tablet:text-[#adb4b1] tablet:ml-[93px] tablet:hover:text-white
+      ipad:text-[13px] ipad:text-[#adb4b1] ipad:ml-[93px] ipad:hover:text-white
+      desktop:text-[13px] desktop:text-[#adb4b1] desktop:ml-[93px] desktop:hover:text-white">ادویه کاری</h2>
+      <h2 class="
+      mobile:text-[12px] mobile:text-[#adb4b1] mobile:text-center mobile:hover:text-white mobile:mt-[9px]
+      tablet:text-[13px] tablet:text-[#adb4b1] tablet:ml-[50px] tablet:hover:text-white
+      ipad:text-[13px] ipad:text-[#adb4b1] ipad:ml-[50px] ipad:hover:text-white
+      desktop:text-[13px] desktop:text-[#adb4b1] desktop:ml-[50px] desktop:hover:text-white">ادویه ماست و خیار</h2>
+      <h2 class="
+      mobile:text-[12px] mobile:text-[#adb4b1] mobile:text-center mobile:hover:text-white mobile:mt-[9px]
+      tablet:text-[13px] tablet:text-[#adb4b1] tablet:ml-[65px] tablet:hover:text-white
+      ipad:text-[13px] ipad:text-[#adb4b1] ipad:ml-[65px] ipad:hover:text-white
+      desktop:text-[13px] desktop:text-[#adb4b1] desktop:ml-[65px] desktop:hover:text-white">فلفل سیاه خالظ</h2>
+      <h2 class="
+      mobile:text-[12px] mobile:text-[#adb4b1] mobile:text-center mobile:hover:text-white mobile:mt-[9px]
+      tablet:text-[13px] tablet:text-[#adb4b1] tablet:ml-[77px] tablet:hover:text-white
+      ipad:text-[13px] ipad:text-[#adb4b1] ipad:ml-[77px] ipad:hover:text-white
+      desktop:text-[13px] desktop:text-[#adb4b1] desktop:ml-[77px] desktop:hover:text-white">زردچوبه ممتاز</h2>
+      </div>
+     </div>
+     <div class="
+     mobile:w-[96%] mobile:h-[356px]
+     tablet:w-[150px] tablet:h-[100%]
+     ipad:w-[150px] ipad:h-[100%]
+     desktop:w-[150px] desktop:h-[100%]">
+        <div class="
+        mobile:w-[100%] mobile:h-[113px] mobile:border-b mobile:border-[#828991] 
+        tablet:w-[100%] tablet:h-[113px] tablet:border-b tablet:border-[#828991]
+        ipad:w-[100%] ipad:h-[113px] ipad:border-b ipad:border-[#828991]
+        desktop:w-[100%] desktop:h-[113px] desktop:border-b desktop:border-[#828991]">
+        <img class="
+        mobile:ml-auto mobile:mr-auto
+        tablet:ml-[12%] tablet:mt-[px]
+        ipad:ml-[12%] ipad:mt-[px]
+        desktop:ml-[12%] desktop:mt-[px] " src="./imag/png/fenjon.png" alt="">
+      </div>
+      <div class="
+       mobile:w-[100%] mobile:h-[47px] mobile:border-b mobile:border-[#828991] 
+      tablet:w-[100%] tablet:h-[47px] tablet:flex tablet:border-b tablet:border-[#828991]
+      ipad:w-[100%] ipad:h-[47px] ipad:flex ipad:border-b ipad:border-[#828991]
+      desktop:w-[100%] desktop:h-[47px] desktop:flex desktop:border-b desktop:border-[#828991]">
+        <h1 class="
+        mobile:text-white mobile:text-center mobile:mt-[10px]
+        tablet:text-white tablet:ml-[30px] tablet:mt-[10px]
+        ipad:text-white ipad:ml-[30px] ipad:mt-[10px]
+        desktop:text-white desktop:ml-[30px] desktop:mt-[10px]">تی بگ گلستان</h1>
+      </div>
+      <div class="
+      tablet:w-[100%] tablet:h-[164px] tablet:flex tablet:flex-row tablet:flex-wrap
+      ipad:w-[100%] ipad:h-[164px] ipad:flex ipad:flex-row ipad:flex-wrap
+     desktop: w-[100%] desktop:h-[164px] desktop:flex desktop:flex-row desktop:flex-wrap">
+      <h2 class="
+      mobile:text-[12px] mobile:text-[#adb4b1] mobile:text-center mobile:hover:text-white mobile:mt-[33px]
+      tablet:text-[13px] tablet:text-[#adb4b1] tablet:ml-[65px] tablet:hover:text-white tablet:mt-[33px]
+      ipad:text-[13px] ipad:text-[#adb4b1] ipad:ml-[65px] ipad:hover:text-white ipad:mt-[33px]
+      desktop:text-[13px] desktop:text-[#adb4b1] desktop:ml-[65px] desktop:hover:text-white desktop:mt-[33px]">تی بگ بلک لاین</h2>
+      <h2 class="
+      mobile:text-[12px] mobile:text-[#adb4b1] mobile:text-center mobile:hover:text-white mobile:mt-[9px]
+      tablet:text-[13px] tablet:text-[#adb4b1] tablet:ml-[72px] tablet:hover:text-white
+      ipad:text-[13px] ipad:text-[#adb4b1] ipad:ml-[72px] ipad:hover:text-white
+      desktop:text-[13px] desktop:text-[#adb4b1] desktop:ml-[72px] desktop:hover:text-white">تی بگ ال گری</h2>
+      <h2 class="
+      mobile:text-[12px] mobile:text-[#adb4b1] mobile:text-center mobile:hover:text-white mobile:mt-[9px]
+      tablet:text-[13px] tablet:text-[#adb4b1] tablet:ml-[79px] tablet:hover:text-white
+      ipad:text-[13px] ipad:text-[#adb4b1] ipad:ml-[79px] ipad:hover:text-white
+      desktop:text-[13px] desktop:text-[#adb4b1] desktop:ml-[79px] desktop:hover:text-white">دمنوش نعناع</h2>
+      <h2 class="
+      mobile:text-[12px] mobile:text-[#adb4b1] mobile:text-center mobile:hover:text-white mobile:mt-[9px]
+      tablet:text-[13px] tablet:text-[#adb4b1] tablet:ml-[76px] tablet:hover:text-white
+      ipad:text-[13px] ipad:text-[#adb4b1] ipad:ml-[76px] ipad:hover:text-white
+      desktop:text-[13px] desktop:text-[#adb4b1] desktop:ml-[76px] desktop:hover:text-white">دمنوش بابونه</h2>
+      <h2 class="
+      mobile:text-[12px] mobile:text-[#adb4b1] mobile:text-center mobile:hover:text-white mobile:mt-[9px]
+      tablet:text-[13px] tablet:text-[#adb4b1] tablet:ml-[61px] tablet:hover:text-white
+      ipad:text-[13px] ipad:text-[#adb4b1] ipad:ml-[61px] ipad:hover:text-white
+      desktop:text-[13px] desktop:text-[#adb4b1] desktop:ml-[61px] desktop:hover:text-white">دمنوش چای سبز</h2>
+      </div>
+     </div>
+     <div class="
+     mobile:w-[96%] mobile:h-[356px]
+     tablet:w-[150px] tablet:h-[100%]
+     ipad:w-[150px] ipad:h-[100%]
+     desktop:w-[150px] desktop:h-[100%]">
+        <div class="
+        mobile:w-[100%] mobile:h-[113px] mobile:border-b mobile:border-[#828991] 
+        tablet:w-[100%] tablet:h-[113px] tablet:border-b tablet:border-[#828991]
+        ipad:w-[100%] ipad:h-[113px] ipad:border-b ipad:border-[#828991]
+        desktop:w-[100%] desktop:h-[113px] desktop:border-b desktop:border-[#828991]">
+        <img class="
+        mobile:ml-auto mobile:mr-auto
+        tablet:ml-[12%] tablet:mt-[px] 
+        ipad:ml-[12%] ipad:mt-[px] 
+        desktop:ml-[12%] desktop:mt-[px] " src="./imag/png/livan.png" alt="">
+      </div>
+      <div class="
+      mobile:w-[100%] mobile:h-[47px] mobile:border-b mobile:border-[#828991] 
+      tablet:w-[100%] tablet:h-[47px] tablet:flex tablet:border-b tablet:border-[#828991]
+      ipad:w-[100%] ipad:h-[47px] ipad:flex ipad:border-b ipad:border-[#828991]
+      desktop:w-[100%] desktop:h-[47px] desktop:flex desktop:border-b desktop:border-[#828991]">
+        <h1 class="
+        mobile:text-white mobile:text-center mobile:mt-[10px]
+        tablet:text-white tablet:ml-[33px] tablet:mt-[10px]
+        ipad:text-white ipad:ml-[33px] ipad:mt-[10px]
+        desktop:text-white desktop:ml-[33px] desktop:mt-[10px]">چای گلستان</h1>
+      </div>
+      <div class="
+      tablet:w-[100%] tablet:h-[164px] tablet:flex tablet:flex-row tablet:flex-wrap
+      ipad:w-[100%] ipad:h-[164px] ipad:flex ipad:flex-row ipad:flex-wrap
+      desktop:w-[100%] desktop:h-[164px] desktop:flex desktop:flex-row desktop:flex-wrap">
+      <h2 class="
+      mobile:text-[12px] mobile:text-[#adb4b1] mobile:text-center mobile:hover:text-white mobile:mt-[33px]
+      tablet:text-[13px] tablet:text-[#adb4b1] tablet:ml-[40px] tablet:hover:text-white tablet:mt-[33px]
+      ipad:text-[13px] ipad:text-[#adb4b1] ipad:ml-[40px] ipad:hover:text-white ipad:mt-[33px]
+      desktop:text-[13px] desktop:text-[#adb4b1] desktop:ml-[40px] desktop:hover:text-white desktop:mt-[33px]">چای ممتاز هندوستان</h2>
+      <h2 class="
+      mobile:text-[12px] mobile:text-[#adb4b1] mobile:text-center mobile:hover:text-white mobile:mt-[9px]
+      tablet:text-[13px] tablet:text-[#adb4b1] tablet:ml-[57px] tablet:hover:text-white
+      ipad:text-[13px] ipad:text-[#adb4b1] ipad:ml-[57px] ipad:hover:text-white
+      desktop:text-[13px] desktop:text-[#adb4b1] desktop:ml-[57px] desktop:hover:text-white">چای ممتاز ال گری</h2>
+      <h2 class="
+      mobile:text-[12px] mobile:text-[#adb4b1] mobile:text-center mobile:hover:text-white mobile:mt-[9px]
+      tablet:text-[13px] tablet:text-[#adb4b1] tablet:ml-[57px] tablet:hover:text-white
+      ipad:text-[13px] ipad:text-[#adb4b1] ipad:ml-[57px] ipad:hover:text-white
+      desktop:text-[13px] desktop:text-[#adb4b1] desktop:ml-[57px] desktop:hover:text-white">چای سیلان عطری</h2>
+      <h2 class="
+      mobile:text-[12px] mobile:text-[#adb4b1] mobile:text-center mobile:hover:text-white mobile:mt-[9px]
+      tablet:text-[13px] tablet:text-[#adb4b1] tablet:ml-[62px] tablet:hover:text-white
+      ipad:text-[13px] ipad:text-[#adb4b1] ipad:ml-[62px] ipad:hover:text-white
+      desktop:text-[13px] desktop:text-[#adb4b1] desktop:ml-[62px] desktop:hover:text-white">چای ممتاز سیلان</h2>
+      <h2 class="
+      mobile:text-[12px] mobile:text-[#adb4b1] mobile:text-center mobile:hover:text-white mobile:mt-[9px]
+      tablet:text-[13px] tablet:text-[#adb4b1] tablet:ml-[45px] tablet:hover:text-white
+      ipad:text-[13px] ipad:text-[#adb4b1] ipad:ml-[45px] ipad:hover:text-white
+      desktop:text-[13px] desktop:text-[#adb4b1] desktop:ml-[45px] desktop:hover:text-white">چای صبحانه گلستان</h2>
+      </div>
+     </div>
+   </div>
+     <div class="
+     mobile:w-[100%] mobile:h-[136px] mobile:bg-[#262626]">
+     <div class="
+     mobile:w-[100%] mobile:h-[20px]
+     tablet:w-[100%] tablet:h-[20px]
+     ipad:w-[100%] ipad:h-[20px]
+     desktop:w-[100%] desktop:h-[20px]">
+       <h1 class="
+       mobile:text-center mobile:text-[#adb4b1] mobile:text-[15px] mobile:mt-[45px]
+       tablet:text-center tablet:text-[#adb4b1] tablet:text-[15px] tablet:mt-[30px]
+       ipad:text-center ipad:text-[#adb4b1] ipad:text-[15px] ipad:mt-[30px]
+       desktop:text-center desktop:text-[#adb4b1] desktop:text-[15px] desktop:mt-[30px]">All Right Reserved Golestan Company 2022-2025</h1>
+     </div>
+      <div class="
+      mobile:w-[100%] mobile:h-[20px]
+      tablet:w-[100%] tablet:h-[20px]
+      ipad:w-[100%] ipad:h-[20px]
+      desktop:w-[100%] desktop:h-[20px]">
+  <h1 class="
+  mobile:text-[#6d7270] mobile:text-[14px] mobile:text-center mobile:mt-[3px]
+  tablet:text-[#6d7270] tablet:text-[14px] tablet:text-center tablet:mt-[9px]
+  ipad:text-[#6d7270] ipad:text-[14px] ipad:text-center ipad:mt-[9px]
+  desktop:text-[#6d7270] desktop:text-[14px] desktop:text-center desktop:mt-[9px]">Design By: Golestan Studio</h1>
+</div>
+</div>
+ </div>
+</body>
+</html>
+<!--end footer-->
+<script>
+    function darkModeListener() {
+    document.querySelector("html").classList.toggle("dark");
+    }
+
+    document.querySelector("input[type='checkbox']#dark-toggle").addEventListener("click", darkModeListener);
+
+</script>
+
+ 
